@@ -1,0 +1,57 @@
+:: Day 01 ::
+
+
+
+=> Variables in JavaScript
+Variables are like containers that hold information such as names, numbers, or other values. In JavaScript, we can create variables in different ways.
+
+-> let is the modern and recommended way to create a variable. It lets you change the value later if you want.
+-> const is used to create a variable that cannot change. It holds a constant value.
+-> var is the old way to create variables. It is not recommended because it can cause problems in bigger programs.
+-> You can also create a variable without using any keyword, but this is a bad practice and should be avoided.
+
+=> How to Show Output
+To see what is inside a variable or to check a value, we use commands like:
+
+-> console.log() which prints the value as simple text.
+-> console.table() which shows the values in a table format, useful when you have many values.
+
+
+---------------------------------------------------------------------------------------------------
+
+
+=> Data Types in JavaScript
+JavaScript has different types of data. These tell the computer what kind of value is stored.
+
+-> Primitive data types are simple. These include:
+
+String: words or text inside quotes
+Number: any number like 5 or 100
+Boolean: true or false
+Null: means empty or no value
+Undefined: means the value is not set
+Symbol: special unique values
+BigInt: very large numbers that normal numbers cannot hold
+
+-> Non-primitive data types are more complex. These include arrays (list of values), objects (key and value pairs), and dates.
+
+=> How to Check Data Types
+To find out what type a variable is, we use the keyword typeof. It tells us if the value is a string, number, boolean, or something else.
+You can write it in two ways: typeof value or typeof(value).
+
+
+---------------------------------------------------------------------------------------------------
+
+
+=> Converting Data Types
+Sometimes, we need to change the type of a value. This is called type conversion.
+
+-> Converting to Number: We use Number(value) to change a value into a number. If the value is text with letters, the result will be NaN which means "Not a Number". Even though it says not a number, its type is still number.
+
+-> Converting to Boolean: We use Boolean(value) to change a value into true or false. Values like 0, empty string, null, and undefined become false. Other values become true.
+
+-> Converting to String: We use String(value) to change any value into text.
+
+
+---------------------------------------------------------------------------------------------------
+

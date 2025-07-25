@@ -1,0 +1,30 @@
+:: Day 01 ::
+
+
+
+=> Introduction to JavaScript
+JavaScript is a programming language used mainly to make websites interactive and alive. It helps add things like buttons, animations, and other effects that make websites easier and more fun to use.
+
+=> Who Developed JavaScript and When
+JavaScript was created by Brendan Eich in 1995. He worked at a company called Netscape. The language was made very quickly, in just 10 days. It was first used in web browsers to make websites better.
+
+=> Where JavaScript Was Created
+JavaScript was created for web browsers. Browsers are programs like Chrome, Firefox, and Edge that show websites. JavaScript runs inside these browsers to change what you see or how the website works without needing to reload the page.
+
+=> Why JavaScript Was Made
+Before JavaScript, websites were mostly static. This means they only showed fixed information, like text and pictures, but did not change or respond to what users did.
+JavaScript was made to solve this problem. It allows websites to be dynamic and interactive. For example, you can click a button and the page can change without refreshing. It helps make websites more useful and interesting.
+
+=> How JavaScript Works
+JavaScript code runs inside the web browser. When you open a website, the browser reads the HTML and CSS to show the page. Then, it runs the JavaScript code to add interactivity.
+JavaScript can do many things like respond to clicks, check forms, change content, or even communicate with servers in the background.
+JavaScript can also run outside browsers now, using tools like Node.js. This lets programmers use JavaScript for things like creating servers and apps.
+
+=> Why We Need JavaScript
+Without JavaScript, websites would be boring and hard to use. JavaScript lets web pages:
+-> Change content quickly
+-> Respond to user actions like clicks and typing
+-> Load new data without reloading the whole page
+-> Create games, animations, and interactive forms
+-> JavaScript is very important because it helps make the web fast, fun, and easy to use.
+
