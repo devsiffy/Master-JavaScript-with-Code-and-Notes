@@ -1,0 +1,213 @@
+
+:: Day 02 ::
+
+
+========================
+1. Arithmetic Operations
+========================
+
+Arithmetic means math operations.
+
+JavaScript supports:
++ (Add), - (Subtract), * (Multiply), ** (Power), / (Divide), % (Remainder)
+
+Example:
+2 + 2 gives 4  
+2 % 3 gives 2 (remainder after division)
+
+
+====================
+2. String Operations
+====================
+
+You can add (join) two strings using the + operator.
+
+Example:
+"hi " + "devsiffy" gives "hi devsiffy"
+
+Important Note
+--------------
+If you add a string and a number, it becomes a string:  
+"5" + 2 = "52"  
+This is called implicit conversion.
+
+
+======================
+3. Operator Precedence
+======================
+
+JavaScript follows math rules.
+
+* and / are done before + and -  
+Use ( ) to change the order
+
+Example:
+2 + 3 * 4 = 14 (first 3*4 = 12, then +2)
+
+
+=================================
+4. Prefix and Postfix (Increment)
+=================================
+
+num++ means increase after using the value  
+++num means increase before using the value
+
+Example:
+If num is 4:  
+num++ gives 4, then num becomes 5  
+++num gives 6, because it adds first
+
+
+================================
+5. Type Conversion in Operations
+================================
+
+When using +, JavaScript may join numbers and strings.
+
+"1" + 2 gives "12"  
+1 + "2" also gives "12"  
+But 1 + 2 + "2" gives "32" (first 1+2 = 3, then "3" + "2")
+
+You can convert other types to numbers:
++true gives 1  
+-true gives -1  
++"" gives 0  
++null gives 0  
++undefined gives NaN (Not a Number)
+
+Important Note
+--------------
+NaN means "Not a Number", and it is a special value in JavaScript.
+
+
+==============
+6. Assignments
+==============
+
+You can assign the same value to many variables:
+num1 = num2 = num3 = 4
+
+All 3 now have the value 4
+
+Important Note
+--------------
+This is allowed in JavaScript, but in strict mode or TypeScript, it's better to avoid it for clarity.
+
+
+====================
+7. Basic Comparisons
+====================
+
+JavaScript supports:
+> (greater), < (less), >=, <=, == (equal), != (not equal)
+
+Example:
+8 > 5 is true  
+6 == 5 is false
+
+
+=================================
+8. Type Conversion in Comparisons
+=================================
+
+"2" > 1 is true (string "2" becomes number 2)  
+null >= 0 is true  
+null == 0 is false  
+undefined > 0 is false  
+undefined == 0 is false  
+null == undefined is true
+
+| Value 1      | Value 2     | ==     | ===    |
+|--------------|-------------|--------|--------|
+| "2"          | 2           | true   | false  |
+| true         | 1           | true   | false  |
+| "3"          | 3           | true   | false  |
+
+== checks values only (can convert types)  
+=== checks values and types (strict)
+
+Important Note
+--------------
+Always prefer === over == to avoid bugs from type conversion.
+
+
+=============
+9. Datatypes
+=============
+
+JavaScript has two main types:
+
+-------------------
+Premitive Datatypes
+-------------------
+
+These are basic values:
+
+1. string - text like "hello"
+2. number - any number (like 18, 3.5)
+3. boolean - true or false
+4. null - means empty (intentional nothing)
+5. undefined - means not set yet
+6. symbol - special, used in advanced JS
+7. bigint - big numbers, add 'n' at end (like 123n)
+
+Use typeof to check type  
+Example: typeof "hello" is string
+
+Important Note
+-------------- 
+typeof null returns "object" — this is a known mistake in JavaScript from the beginning.
+
+-------------------------------
+Reference (Non-Premitive) Types
+-------------------------------
+
+These are more complex:
+
+1. array - list of items  
+2. object - group of key:value  
+3. function - block of code
+
+typeof an array is "object"  
+typeof a function is "function"
+
+Important Note
+--------------
+To check if a variable is really an array, use:  
+Array.isArray(variable)
+
+
+====================
+10. Tricky Datatypes
+====================
+
+typeof null is "object" (this is a bug, but still there)  
+typeof undefined is "undefined"  
+typeof NaN is "number" (NaN also acts like a number)
+
+
+==============================
+Extra Knowledge for Interviews
+==============================
+
+1. NaN !== NaN — NaN is the only value not equal to itself  
+2. typeof NaN is "number"  
+3. typeof [] is "object"  
+4. typeof null is also "object" (bug)  
+5. Always use === to avoid type confusion  
+6. You can use Number(), String(), Boolean() to convert types  
+7. typeof functionName returns "function"
+
+
+==========
+Key Points
+==========
+
++ means both addition and string join  
+== converts types, === does not  
+Use typeof to check value types  
+null and undefined behave differently  
+NaN is a number but not equal to anything, even itself  
+Prefer === and !== in all comparisons  
+Arrays are objects, but can be checked with Array.isArray()
+
