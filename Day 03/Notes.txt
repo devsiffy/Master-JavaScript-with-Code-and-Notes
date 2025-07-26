@@ -1,0 +1,254 @@
+
+:: Day 03 ::
+
+
+================
+Stack and Heap
+================
+
+STACK
+-----
+
+Stack is used for primitive data types.  
+Primitive types are: string, number, boolean, null, undefined, symbol, bigint.  
+When you store a primitive value in a variable, the value is saved directly.  
+
+If you copy this variable to another, it creates a **new separate copy**.  
+So changing one will not change the other.
+
+Example:
+let name1 = "Umair";
+let name2 = name1;
+
+name2 = "Ali";  
+name1 is still "Umair"
+
+Each variable gets its own space in memory.
+
+HEAP
+----
+
+Heap is used for non-primitive (reference) types.  
+These include: objects, arrays, and functions.  
+
+When you store a non-primitive value in a variable, the **memory address** (reference) is saved.  
+So if you copy one object to another, both point to the **same object** in memory.  
+
+Changing one will also change the other.
+
+Example:
+let user1 = { email: "abc@x.com" };  
+let user2 = user1;
+
+user2.email = "xyz@x.com";  
+Now user1.email is also "xyz@x.com"
+
+Important Concepts for Stack/Heap
+---------------------------------
+
+1. Primitives are stored in stack as values.  
+2. Non-primitives are stored in heap as references.  
+3. Stack copies are **safe** — they don’t affect the original.  
+4. Heap copies are **linked** — they affect each other.  
+5. `const` in JS **doesn’t make data immutable**, only the variable binding.  
+
+
+===============================
+const does NOT freeze the value
+===============================
+
+const locks the variable **binding**, not the value inside it.
+
+Binding = connection between variable name and memory.
+
+Example:
+const name = "Ali";  
+name = "Umair"; Not allowed (can't reassign)
+
+const user = { name: "Junaid" };  
+user.name = "Farooq"; Allowed (value inside changed)
+
+Key Point:
+- const = fixed binding (name can't point elsewhere)  
+- value inside (object, array) can still change  
+- Use Object.freeze() to fully lock data (shallow only)
+
+
+=====================
+Strings in JavaScript
+=====================
+
+How to define a string:
+
+Approach 1 (most common):
+let str = "Hello";
+
+Approach 2 (less common):
+let str = new String("World");
+
+Both are strings, but the second one creates a string **object**.  
+Use the first method in real projects. It's easier and better.
+
+Accessing Characters
+--------------------
+
+You can access characters in a string by index:
+let str = "Hello";
+str[0] gives "H"  
+str[1] gives "e"
+
+String Length
+-------------
+
+Use `.length` to get the number of characters in a string.
+
+let word = "Hello";  
+word.length is 5
+
+
+================
+String Prototype
+================
+
+All strings in JS use String.prototype behind the scenes.  
+It holds all the built-in string methods.
+
+Example:
+let str = "Hello";  
+str.toUpperCase() → method comes from String.prototype
+
+You can see it:
+console.log(str.__proto__);
+
+Why it matters:
+- All string methods come from this shared object  
+- Saves memory (not copied on every string) 
+
+
+=============================
+Useful String Methods (Top 20)
+=============================
+
+charAt(index)  
+- Returns character at given index.
+
+charCodeAt(index)  
+- Gives ASCII code of character.
+
+at(index)  
+- Similar to charAt. Works with negative indexes.
+
+includes(text)  
+- Checks if text is present in the string. Returns true or false.
+
+indexOf(text)  
+- Finds the position of first match. Returns -1 if not found.
+
+lastIndexOf(text)  
+- Finds the last position of match.
+
+slice(start, end)  
+- Cuts a part of string from start to end (not including end).
+
+substring(start, end)  
+- Similar to slice. Does not allow negative numbers.
+
+substr(start, length)  
+- Older version. Avoid using it.
+
+split(separator)  
+- Breaks the string into parts using the separator.
+
+replace(old, new)  
+- Replaces first match of old with new.
+
+replaceAll(old, new)  
+- Replaces all matches of old with new.
+
+repeat(n)  
+- Repeats the string n times.
+
+startsWith(text)  
+- Checks if the string starts with given text.
+
+endsWith(text)  
+- Checks if the string ends with given text.
+
+toUpperCase()  
+- Converts the whole string to capital letters.
+
+toLowerCase()  
+- Converts the whole string to small letters.
+
+trim()  
+- Removes spaces from both sides.
+
+trimStart(), trimEnd()  
+- Removes spaces from start or end only.
+
+valueOf()  
+- Returns the string itself.
+
+
+=========================
+HTML Style String Methods
+=========================
+
+These are older methods used for adding HTML styles in text (not recommended now):
+
+- bold()
+- italics()
+- big()
+- small()
+- sub()
+- sup()
+- strike()
+- anchor()
+- fontcolor()
+- fontsize()
+- link()
+
+They are rarely used in modern JS.  
+Focus more on logical string methods.
+
+
+=================
+String Comparison
+=================
+
+localeCompare(str)  
+- Compares two strings.  
+- Returns 0 if same, -1 or 1 if different.
+
+Example:
+"abc".localeCompare("abc")  => 0  
+"abc".localeCompare("def")  => -1
+
+
+=====================
+Tricky and Core Tips
+=====================
+
+1. Strings are **immutable** in JavaScript.  
+   This means any method that "changes" a string, actually returns a **new** string.
+
+2. All primitive strings like `"Hello"` automatically get access to string methods  
+   because JavaScript wraps them in a String object when needed.
+
+3. Use `.split("")` to turn a string into an array of characters.  
+   Example: "JS".split("") gives ["J", "S"]
+
+4. Chaining methods is allowed:  
+   Example: " hello ".trim().toUpperCase() gives "HELLO"
+
+5. `==` compares values. `===` compares values **and** types.  
+   "5" == 5 is true  
+   "5" === 5 is false
+
+6. Use `.startsWith()` and `.endsWith()` in interview string questions like:
+   "Does this string start with a capital letter?"
+
+7. To reverse a string:  
+   "hello".split("").reverse().join("") => "olleh"
+
+8. Avoid using `new String()` in interviews. It behaves like an object and may confuse type checks.
