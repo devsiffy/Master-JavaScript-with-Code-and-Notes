@@ -1,0 +1,202 @@
+
+:: Day 04 ::
+
+
+=====================
+Numbers in JavaScript
+=====================
+
+JavaScript can work with numbers in simple ways. You can create numbers and use many helpful methods.
+
+----------------
+Defining Numbers
+----------------
+
+You can define numbers in two main ways:
+
+    let score = 400;
+
+This is the normal way.
+
+    let balance = new Number(900);
+
+This uses the Number object. Both are valid.
+
+--------------
+Number Methods
+--------------
+
+You can use different methods on numbers to format or convert them.
+
+    let num1 = 300;
+    let num2 = 500.892125;
+    let num3 = 1000000000;
+
+* toFixed(n)  
+    → Keeps only 'n' numbers after the decimal.
+
+        num1.toFixed(2);      → "300.00"
+        num2.toFixed(2);      → "500.89"
+
+* toString()  
+    → Converts number to string.
+
+        num1.toString();      → "300"
+        typeof num1.toString(); → "string"
+
+* toPrecision(n)  
+    → Shows number with 'n' total digits.
+
+        num1.toPrecision(2); → "3.0e+2"
+        num2.toPrecision(3); → "501"
+
+* toLocaleString()  
+    → Adds commas for readability.
+
+        num3.toLocaleString();        → "1,000,000,000"
+        num3.toLocaleString("en-IN"); → "1,00,00,00,000"
+
+
+==================
+Math in JavaScript
+==================
+
+Math is a built-in object in JavaScript. It has useful constants and methods.
+
+---------------
+Math Properties
+---------------
+
+* Math.PI → 3.141592653589793  
+* Math.E  → 2.718281828459045
+
+------------
+Math Methods
+------------
+
+* Math.abs(x)  
+    → Gives the absolute (positive) value.
+
+        Math.abs(-123); → 123
+
+* Math.sqrt(x)  
+    → Square root of a number.
+
+        Math.sqrt(25); → 5
+
+* Math.round(x)  
+    → Rounds to nearest whole number.
+
+        Math.round(4.5); → 5
+
+* Math.ceil(x)  
+    → Rounds up to the next whole number.
+
+        Math.ceil(4.1); → 5
+
+* Math.floor(x)  
+    → Rounds down to the lower whole number.
+
+        Math.floor(4.9); → 4
+
+* Math.min(a, b, ...)  
+    → Finds the smallest value.
+
+        Math.min(2, 4, 1); → 1
+
+* Math.max(a, b, ...)  
+    → Finds the largest value.
+
+        Math.max(2, 4, 1); → 4
+
+-------------
+Math.random()
+-------------
+
+* Math.random()  
+    → Gives random number between 0 and 1 (not including 1).
+
+        Math.random(); → 0.67823 (example)
+
+* Random number between 1 and 10:
+
+        Math.floor(Math.random() * 10) + 1;
+
+* Random number between two values (min and max):
+
+        let min = 10;
+        let max = 20;
+
+        Math.floor(Math.random() * (max - min + 1)) + min;
+
+
+===================
+Dates in JavaScript
+===================
+
+JavaScript has a Date object to work with dates and times.
+
+------------
+Create Dates
+------------
+
+* Current date and time:
+
+        let myDate = new Date();
+
+* Create specific dates:
+
+        let myCreatedDate = new Date(2023, 0, 23);
+        let myCreatedDate = new Date("2023-01-14");
+        let myCreatedDate = new Date("01-23-2024");
+
+Note: Month starts from 0 (January = 0)
+
+------------
+Date Methods
+------------
+
+* toString()  
+    → Full date and time as string.
+
+        myDate.toString();
+
+* toDateString()  
+    → Only the date part.
+
+* toISOString()  
+    → ISO format.
+
+* toJSON()  
+    → Same as toISOString.
+
+* toLocaleString()  
+    → Shows in local date-time format.
+
+* typeof myDate  
+    → Returns "object"
+
+----------
+Timestamps
+----------
+
+* Current timestamp in milliseconds:
+
+        let timeStamp = Date.now();
+
+* Convert to seconds:
+
+        Math.floor(Date.now() / 1000);
+
+--------------
+Get Date Parts
+--------------
+
+* Get month:
+
+        newDate.getMonth() + 1;
+
+* Get day of the month:
+
+        newDate.getDate();
+

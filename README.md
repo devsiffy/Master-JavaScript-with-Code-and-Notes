@@ -77,3 +77,37 @@
    - Common String Methods (charAt, slice, replace, etc.)
    - String Comparison (`localeCompare`)
    - Legacy HTML String Methods (deprecated)
+
+---
+
+<h3 style="color: #4169E1;">📅 Day 04</h3>
+
+> 🌱 _"Every expert was once a beginner. Keep coding, keep growing."_
+
+1. **Numbers & Formatting**
+
+   - Defining numbers (primitive vs object)
+   - Methods:
+     `toFixed()` – fixed decimal places
+     `toString()` – convert to string
+     `toPrecision()` – set total digits
+     `toLocaleString()` – readable format
+     <br />
+
+2. **Math Operations**
+
+   - Constants: `Math.PI`, `Math.E`
+   - Methods:
+     `abs()`, `sqrt()`
+     `round()`, `ceil()`, `floor()`
+     `min()`, `max()`
+   - Random no. generation:
+     `Math.random()` – value between 0 and 1
+     Custom range logic (e.g., 1–10, min–max)
+     <br />
+
+3. **Dates & Time**
+   - Create dates (current and specific)
+   - Format methods: `toString()`, `toDateString()`, `toISOString()`, `toLocaleString()`
+   - Timestamps: `Date.now()`, convert to seconds
+   - Extract parts: `getMonth()`, `getDate()`
