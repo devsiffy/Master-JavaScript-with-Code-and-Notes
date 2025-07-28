@@ -1,4 +1,4 @@
-<h2 style="color: orange;">🔥💻 JavaScript Mastery with Code and Notes 🚀📘</h2>
+<h2 style="color: orange;">🏆 JavaScript Mastery: Level Up Your Skills 🚀</h2>
 
 <h3 style="color: #4169E1;">📅 Day 01</h3>
 
@@ -111,3 +111,31 @@
    - Format methods: `toString()`, `toDateString()`, `toISOString()`, `toLocaleString()`
    - Timestamps: `Date.now()`, convert to seconds
    - Extract parts: `getMonth()`, `getDate()`
+
+---
+
+<h3 style="color: #4169E1;">📅 Day 05</h3>
+
+> 🌟 _"Learning to write programs stretches your mind, and helps you think better."_
+
+1. **Arrays**
+
+   - What is an Array?
+   - Array Indexing Basics
+   - Creating arrays:
+     Literal Syntax `[]`
+     Constructor Syntax `new Array()`
+     <br />
+
+2. **Working with Arrays**
+
+   - Add/Remove: `push()`, `pop()`, `unshift()`, `shift()`
+   - Search: `includes()`, `indexOf()`
+   - Transform: `slice()`, `splice()`, `join()`, `flat()`
+     <br />
+
+3. **Combining & Converting**
+
+   - Merge: `concat()`, spread `...`
+   - Convert: `Array.from()`, `Array.of()`
+   - Type Check: `Array.isArray()`

@@ -1,0 +1,204 @@
+
+:: Day 05 ::
+
+
+====================
+Arrays in JavaScript
+====================
+
+What is an Array?
+-----------------
+
+An array is a special variable that can hold more than one value.  
+It keeps values in order, and you can access them by index.
+
+The first item is at index 0, second at index 1, and so on.
+
+    Example:
+        const fruits = ["apple", "banana", "orange"];
+        fruits[0];  → "apple"
+
+
+=======================
+Ways to Create an Array
+=======================
+
+* Using square brackets []
+
+        const arr = [1, 2, 3];
+
+This is the most common way to create an array.
+
+* Using new Array()
+
+        const arr = new Array("a", "b", "c");
+
+This is also valid but less common for beginners.
+
+
+====================
+Common Array Methods
+====================
+
+* push() – Adds value(s) at the end of array
+
+        arr.push(5);      → [1, 2, 3, 5]
+        arr.push(6, 7);   → [1, 2, 3, 5, 6, 7]
+
+* pop() – Removes the last item
+
+        arr.pop();        → removes 7
+
+* unshift() – Adds value(s) at the beginning
+
+        arr.unshift(0);   → [0, 1, 2, 3]
+
+* shift() – Removes the first item
+
+        arr.shift();      → removes 0
+
+* includes() – Checks if a value is in the array
+
+        arr.includes(2);  → true
+        arr.includes(9);  → false
+
+* indexOf() – Shows index of a value
+
+        arr.indexOf(3);   → 2
+        arr.indexOf(10);  → -1 (not found)
+
+* slice(start, end) – Returns a part of array, original array does NOT change
+
+        arr.slice(1, 4);  → returns items from index 1 to 3
+
+* splice(start, count) – Removes or replaces items, original array CHANGES
+
+        arr.splice(1, 2); → removes 2 items from index 1
+
+* join() – Converts array to a string (comma by default)
+
+        arr.join();       → "1,2,3"
+
+* concat() – Combines two arrays into one
+
+        arr1.concat(arr2);
+
+* spread (...) – Also used to combine arrays
+
+        [...arr1, ...arr2];
+
+* flat() – Flattens nested arrays
+
+        arr.flat(Infinity);
+
+* Array.isArray() – Checks if a value is really an array
+
+        Array.isArray([1, 2]);  → true
+        Array.isArray("abc");  → false
+
+* Array.from() – Converts string or object keys/values to array
+
+        Array.from("abc");     → ["a", "b", "c"]
+
+* Array.of() – Makes array from values
+
+        Array.of(1, 2, 3);     → [1, 2, 3]
+
+
+================
+Tricky Questions
+================
+
+Difference: slice() vs splice()
+-------------------------------
+
+* slice() makes a copy of part of array.
+  The original array stays the same.
+
+        const arr = [1, 2, 3, 4];
+        const result = arr.slice(1, 3);  → [2, 3]
+        arr stays [1, 2, 3, 4]
+
+* splice() removes or replaces items.
+  The original array is changed.
+
+        const arr = [1, 2, 3, 4];
+        const result = arr.splice(1, 2); → [2, 3]
+        arr becomes [1, 4]
+
+
+Flatten nested arrays
+---------------------
+
+Use flat(Infinity) to make all levels flat.
+
+        const arr = [1, [2, [3, [4]]]];
+        const flatArr = arr.flat(Infinity);
+        → [1, 2, 3, 4]
+
+
+Merge two arrays
+----------------
+
+* Using concat()
+
+        const a = [1, 2];
+        const b = [3, 4];
+        const result = a.concat(b);  
+        → [1, 2, 3, 4]
+
+* Using spread (...)
+
+        const result = [...a, ...b];  
+        → [1, 2, 3, 4]
+
+
+push() with another array
+-------------------------
+
+If you use push() with another array, it adds the full array as one item.
+
+        const a = [1, 2];
+        const b = [3, 4];
+        a.push(b);  
+        → [1, 2, [3, 4]]
+
+To merge, use concat() or spread(...).
+
+
+Convert string to array
+-----------------------
+
+Use Array.from() to split string into array of letters.
+
+        Array.from("abc");  
+        → ["a", "b", "c"]
+
+
+Check if value is an array
+--------------------------
+
+        Array.isArray([1, 2]);   → true  
+        Array.isArray("text");  → false
+
+
+Make array using Array.of()
+---------------------------
+
+        Array.of(10, 20, 30);  
+        → [10, 20, 30]
+
+
+Convert object to array
+-----------------------
+
+If you use Array.from() directly on an object, it gives empty array:
+
+        Array.from({ name: "js" });  → []
+
+To get keys or values:
+
+        Object.keys(obj);    → ["name"]
+        Object.values(obj);  → ["js"]
+        Array.from(Object.keys(obj));
+
