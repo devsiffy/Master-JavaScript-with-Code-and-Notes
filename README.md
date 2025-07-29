@@ -107,6 +107,7 @@
      <br />
 
 3. **Dates & Time**
+
    - Create dates (current and specific)
    - Format methods: `toString()`, `toDateString()`, `toISOString()`, `toLocaleString()`
    - Timestamps: `Date.now()`, convert to seconds
@@ -139,3 +140,30 @@
    - Merge: `concat()`, spread `...`
    - Convert: `Array.from()`, `Array.of()`
    - Type Check: `Array.isArray()`
+
+---
+
+<h3 style="color: #4169E1;">📅 Day 06</h3>
+
+> 🤖 _"Programming is 10% writing code and 90% figuring out why it doesn’t work — welcome to the club!"_
+
+1. **Understanding Objects**
+
+   - What is an Object?
+   - Accessing Values (Dot & Bracket Notation)
+   - Symbol Keys
+     <br />
+
+2. **Creating & Structuring Objects**
+
+   - Object Literals vs Constructor Syntax
+   - Nested Objects
+   - Array of Objects
+     <br />
+
+3. **Working with Objects**
+
+   - Methods & `this` Keyword
+   - Freezing Objects
+   - Merging Objects (`Object.assign()`, Spread Operator)
+   - Utility Methods: `keys()`, `values()`, `entries()`, `hasOwnProperty()`

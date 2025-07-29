@@ -1,0 +1,111 @@
+
+:: Day 06 ::
+
+
+=====================
+Objects in JavaScript
+=====================
+
+
+What is an Object?
+------------------
+
+→ An object is a collection of key-value pairs.
+→ It is used to store related data like name, age, email, etc., in one place.
+→ Keys are also called properties. Values can be strings, numbers, arrays, functions, or even another object.
+→ Objects make your code organized and readable.
+
+
+Accessing Object Values
+-----------------------
+
+You can access values using:
+
+    → Dot notation (obj.key)  
+    → Square bracket notation (obj["key"])
+
+Use square brackets when the key has spaces or special characters.
+
+
+Symbol Keys
+-----------
+
+→ You can use the Symbol data type as a key in an object.
+→ Symbol keys are not visible in normal object loops or functions like Object.keys(). They are used when you want a hidden or unique key.
+
+
+Freezing an Object
+------------------
+
+→ If you want to make an object read-only, use `Object.freeze()`.
+→ After freezing, you cannot change, add, or delete any values in the object.
+
+
+Functions in Objects
+--------------------
+
+→ You can store a function as a value inside an object.
+→ These are called methods of the object.
+→ Inside a method, `this` refers to the object itself.
+→ It helps in accessing other keys inside the same object.
+→ We will learn more about `this` keyword in a later topic.
+
+Note: When you run a method using console.log, it may show `undefined` after the output. Don’t worry, we will explain it later.
+
+
+==================================
+Creating Objects Using Constructor
+==================================
+
+→ JavaScript also allows creating objects using the `new Object()` syntax.
+→ Both methods (object literal and constructor) work the same.
+→ Use object literal (`{}`) for simple objects. It is shorter and easier.
+
+
+==============
+Nested Objects
+==============
+
+→ Objects can contain other objects inside them.
+→ This is called a nested object.
+→ You can access nested values by chaining the keys step by step.
+→ It helps in storing grouped or detailed data.
+
+
+==========================
+Combining Multiple Objects
+==========================
+
+You can merge two or more objects using:
+
+    → Object.assign(target, source)  
+    → Spread operator `{ ...obj1, ...obj2 }`
+
+Spread operator is the modern and cleaner way.
+
+Be careful: If the same key exists in both objects, the last one will overwrite the earlier value.
+
+
+================
+Array of Objects
+================
+
+→ An array can hold multiple objects.
+→ This is useful when storing lists of users, products, etc.
+→ Each object in the array can have its own keys and values.
+→ You can access data by using the index of the array and the key of the object.
+
+
+======================
+Object Utility Methods
+======================
+
+JavaScript gives useful built-in methods for objects:
+
+    * Object.keys(obj) → Returns all keys as an array  
+    * Object.values(obj) → Returns all values as an array  
+    * Object.entries(obj) → Returns key-value pairs as array of arrays  
+    * obj.hasOwnProperty("key") → Checks if a key exists in the object
+
+These help in working with object data easily.
+
