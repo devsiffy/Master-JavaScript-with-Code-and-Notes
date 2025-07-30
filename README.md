@@ -167,3 +167,30 @@
    - Freezing Objects
    - Merging Objects (`Object.assign()`, Spread Operator)
    - Utility Methods: `keys()`, `values()`, `entries()`, `hasOwnProperty()`
+
+---
+
+<h3 style="color: #4169E1;">📅 Day 07</h3>
+
+> 🌟 _"Data isn't just stored — it's structured, shared, and made functional."_
+
+1. **Object Destructuring**
+
+   - Extracting properties from objects
+   - Renaming variables during destructuring
+   - Practical use with user data or API responses  
+     <br />
+
+2. **Intro to JSON**
+
+   - Understanding JSON structure
+   - Differences between JSON and JavaScript objects
+   - Common usage in APIs and data exchange  
+     <br />
+
+3. **Functions in JavaScript**
+
+   - Normal Function
+   - Function with Return
+   - Function with If Condition
+   - Function with Default Values

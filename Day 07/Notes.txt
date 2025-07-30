@@ -1,0 +1,92 @@
+
+:: Day 07 ::
+
+
+====================
+Object Destructuring
+====================
+
+Destructuring helps you get values from an object easily and store them in variables.
+
+In your code:
+    * You created an object named user with some properties.
+    * You used destructuring to get:
+        → username directly from the object.
+        → email, but renamed it to email_addr.
+
+What this teaches:
+    * How to get one property from an object.
+    * How to rename a property while destructuring.
+
+Tip:
+    * Destructuring is often used with API responses or user data.
+
+
+=============
+Intro to JSON
+=============
+
+JSON means JavaScript Object Notation.
+
+It is a format used to store and share data.
+
+Looks like a JavaScript object, but it is written as a string.
+
+Used a lot when working with APIs and external data.
+
+Basic idea:
+    * Keys and values
+    * Keys must be in double quotes
+    * Cannot use functions or comments inside JSON
+
+Example use:
+    * Send user data from frontend to backend
+    * Receive data from server
+
+You did not write JSON code, but it is closely related to objects.
+
+
+=======================
+Functions in JavaScript
+=======================
+
+Your code shows 4 types of functions.
+
+1. Normal Function
+------------------
+
+    * greet() just shows a message using console.log.
+    * Does not take any input or return anything.
+Use:
+    * Good for actions like showing messages.
+
+
+2. Function with Return
+-----------------------
+
+    * add(num1, num2) returns the sum of two numbers.
+    * The result is saved in a variable.
+Use:
+    * Return is used when we need to get a value from a function.
+    * Very useful in calculations and logic.
+
+
+3. Function with If Condition
+-----------------------------
+
+    * userLoginMsg(username) checks if username exists.
+    * If not, it shows a message.
+    * If yes, it returns a welcome message.
+Use:
+    * Use `if` to control what the function does.
+    * Return can stop the function early (exit point).
+
+
+4. Function with Default Values
+-------------------------------
+
+    * sayName(name = "M Umair") uses a default name if no name is given.
+Use:
+    * Default values prevent errors.
+    * Makes function safer to use.
+
