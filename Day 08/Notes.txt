@@ -1,0 +1,110 @@
+
+:: Day 08 ::
+
+
+===================
+Functions and Scope
+===================
+
+Functions with Spread as Parameter
+----------------------------------
+
+Sometimes, we want to send many values to a function.
+
+We don’t know how many values the user will pass.
+
+In this case, we use the **spread** syntax using three dots: `...`
+
+The spread collects all extra values into one array.
+
+→ Example idea: A function can collect many numbers using `...nums`.
+
+Inside the function, you can use `nums` like an array.
+
+→ Good for math functions or when the number of values is not fixed.
+
+
+Functions with Fixed and Spread Parameters
+------------------------------------------
+
+You can mix normal parameters and one spread parameter.
+
+The order is important:
+* First, write normal parameters
+* Then, write the spread parameter at the end
+
+→ The first values go to normal variables  
+→ All the rest go into the array created by `...`
+
+This is useful when the function needs 1 or 2 fixed inputs, and then many extra values.
+
+**Important Rule:** Only one `...spread` is allowed, and it must be last.
+
+
+Functions with Object as Parameter
+----------------------------------
+
+We can also pass an **object** to a function.
+
+The function can then use keys inside the object.
+
+→ Useful when we want to send data with names (like username, email, age, etc.)
+
+Inside the function, use `object.keyName` to get the value.
+
+This keeps the code clean and easy to understand.
+
+
+Functions with Array as Parameter
+---------------------------------
+
+Just like objects, we can pass an **array** to a function.
+
+Inside the function, we can access the values using index numbers like `array[0]`, `array[1]`, etc.
+
+→ Useful when the order of values is important, but we don’t need key names.
+
+
+=================================
+Understanding Scope in JavaScript
+=================================
+
+What is Scope?
+--------------
+
+Scope means: Where can we use the variable?
+
+JavaScript has **global**, **function**, and **block** scopes.
+
+Different keywords (`var`, `let`, `const`) behave differently with scope.
+
+
+Using var
+---------
+
+* `var` is function-scoped or global-scoped.
+* It does not care about blocks like `if`, `for`, etc.
+* If you declare `var` inside a block, it can still be used outside.
+
+→ This can cause bugs. It’s better to avoid `var` in modern JavaScript.
+
+
+Using let
+---------
+
+* `let` is block-scoped.
+* If you declare it inside a block (`{ }`), it stays only there.
+* Outside that block, it cannot be accessed.
+
+→ This helps avoid problems and makes code safer.
+
+
+Using const
+-----------
+
+* `const` is also block-scoped like `let`.
+* You must assign a value when you declare it.
+* You cannot change that value later.
+
+→ Good for fixed values that should not be changed.
+

@@ -1,6 +1,6 @@
-<h2 style="color: orange;">🏆 JavaScript Mastery: Level Up Your Skills 🚀</h2>
+<h2>🏆 JavaScript Mastery: Level Up Your Skills 🚀</h2>
 
-<h3 style="color: #4169E1;">📅 Day 01</h3>
+<h3>📅 Day 01</h3>
 
 > 🌱 _"Success doesn’t come from what you do occasionally, it comes from what you do consistently."_
 
@@ -24,7 +24,7 @@
 
 ---
 
-<h3 style="color: #4169E1;">📅 Day 02</h3>
+<h3>📅 Day 02</h3>
 
 > 🧠 _"Code is like humor. When you have to explain it, it’s bad."_
 
@@ -54,7 +54,7 @@
 
 ---
 
-<h3 style="color: #4169E1;">📅 Day 03</h3>
+<h3>📅 Day 03</h3>
 
 > 🧠 _"Understanding memory and strings is key to mastering JavaScript."_
 
@@ -80,7 +80,7 @@
 
 ---
 
-<h3 style="color: #4169E1;">📅 Day 04</h3>
+<h3>📅 Day 04</h3>
 
 > 🌱 _"Every expert was once a beginner. Keep coding, keep growing."_
 
@@ -115,7 +115,7 @@
 
 ---
 
-<h3 style="color: #4169E1;">📅 Day 05</h3>
+<h3>📅 Day 05</h3>
 
 > 🌟 _"Learning to write programs stretches your mind, and helps you think better."_
 
@@ -143,7 +143,7 @@
 
 ---
 
-<h3 style="color: #4169E1;">📅 Day 06</h3>
+<h3>📅 Day 06</h3>
 
 > 🤖 _"Programming is 10% writing code and 90% figuring out why it doesn’t work — welcome to the club!"_
 
@@ -170,7 +170,7 @@
 
 ---
 
-<h3 style="color: #4169E1;">📅 Day 07</h3>
+<h3>📅 Day 07</h3>
 
 > 🌟 _"Data isn't just stored — it's structured, shared, and made functional."_
 
@@ -194,3 +194,24 @@
    - Function with Return
    - Function with If Condition
    - Function with Default Values
+
+---
+
+<h3>📅 Day 08</h3>
+
+> ✨ _"Functions make code reusable. Scope makes code manageable."_
+
+1. **Functions and Scope**
+
+   - Functions with Spread as Parameter
+   - Functions with Fixed and Spread Parameters
+   - Functions with Object as Parameter
+   - Functions with Array as Parameter  
+     <br />
+
+2. **Understanding Scope in JavaScript**
+
+   - What is Scope?
+   - Using `var`
+   - Using `let`
+   - Using `const`
