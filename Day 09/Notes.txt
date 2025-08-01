@@ -1,0 +1,135 @@
+
+:: Day 09 ::
+
+
+=======================
+Block and Lexical Scope
+=======================
+
+
+Block Scope
+-----------
+
+A block is code written inside curly braces { }.
+
+Variables declared using 'let' and 'const' inside a block cannot be used outside the block.
+    → These variables live only inside that block.
+    → 'var' does not follow block scope. It escapes the block.
+
+This helps keep variables safe and not mixed up with other parts of the code.
+
+
+Lexical Scope
+-------------
+
+Lexical scope means inner functions can use variables from their outer functions.
+
+This is decided by where the function is written in the code.
+    → A function defined inside another function
+       can access the outer function’s variables.
+
+Lexical scope is the reason closures work in JavaScript.
+
+
+=======
+Closure
+=======
+
+Closure happens when a function can remember and use variables from the outer function, even after the outer function has finished running.
+
+It is possible because of lexical scope.
+    → Inner function keeps a reference to the outer variables.
+    → This is useful in many real-life cases like data hiding.
+
+
+========
+Hoisting
+========
+
+Hoisting means JavaScript moves variable and function declarations to the top before running the code.
+    → Only declarations are moved, not initial values.
+
+
+Function Declaration
+--------------------
+
+    → Fully hoisted.
+    → You can call it before it is defined.
+
+
+Function Expression (with let or const)
+---------------------------------------
+
+    → Not hoisted.
+    → Gives ReferenceError if used before declaration.
+
+
+Function Expression (with var)
+------------------------------
+
+    → Declaration is hoisted but value is undefined.
+    → Gives TypeError if used before assignment.
+
+Understanding hoisting helps avoid common JavaScript errors.
+
+
+===============
+Arrow Functions
+===============
+
+Arrow functions are a short way to write functions.
+
+They are useful for small tasks and have simple syntax.
+    → No 'function' keyword.
+    → Can return values directly.
+    → For one-liners, you can skip 'return' and curly braces.
+
+Arrow functions do NOT have their own 'this'.
+    → They take 'this' from the place where they were defined.
+
+This makes them different from regular functions.
+
+==============
+'this' Keyword
+==============
+
+'this' refers to the object that is calling the function.
+
+
+In Object Method
+----------------
+
+    → 'this' refers to the object itself.
+    → If you change the object's properties, 'this' still points to the updated object.
+
+
+In Global Context
+-----------------
+
+    → In browser, 'this' refers to the window object.
+    → In Node.js, 'this' is an empty object in global scope.
+
+
+In Different Function Types
+---------------------------
+
+    → Regular function: 'this' depends on how the function is called.
+    → Function expression: behaves same as regular function.
+    → Arrow function: does not have its own 'this'.
+       It uses 'this' from outer (lexical) scope.
+
+Be careful when using 'this' inside arrow functions, especially in object methods.
+
+
+==========
+Quick Tips
+==========
+
+* Use 'let' and 'const' for block scope safety.
+* Lexical scope allows inner functions to access outer variables.
+* Closures keep outer variables alive inside inner functions.
+* Function declarations are hoisted. Function expressions are not.
+* Arrow functions are shorter and inherit 'this' from their outer scope.
+* 'this' behaves differently in arrow and regular functions.
+* Always check the context when using 'this'.
+

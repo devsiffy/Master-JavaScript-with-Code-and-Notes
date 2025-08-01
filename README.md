@@ -215,3 +215,29 @@
    - Using `var`
    - Using `let`
    - Using `const`
+
+---
+
+<h3>📅 Day 09</h3>
+
+> 🧠 _"Understanding scope and context unlocks powerful control over your code."_
+
+1. **Scope in JavaScript**
+
+   - Block Scope (`let`, `const`, `var`)
+   - Lexical Scope and Closures
+     <br />
+
+2. **Function Behavior**
+
+   - Function Declarations vs Expressions
+   - Arrow Functions and `this` Binding
+     <br />
+
+3. **The `this` Keyword**
+
+   - In Object Methods, Global Context, and Different Function Types
+     <br />
+
+4. **Essentials Recap**
+   - Scope Safety, Closure Use, Hoisting Rules, and Context Awareness
