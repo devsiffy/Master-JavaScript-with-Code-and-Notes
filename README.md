@@ -241,3 +241,31 @@
 
 4. **Essentials Recap**
    - Scope Safety, Closure Use, Hoisting Rules, and Context Awareness
+
+---
+
+<h3>📅 Day 10</h3>
+
+> 🌀 _"JavaScript doesn’t sleep — it stacks dreams in a call stack and wakes them with a function."_
+
+1. **IIFE (Immediately Invoked Function Expression)**
+
+   - What is IIFE?
+   - Why use IIFE?
+   - Important Rules  
+     <br/>
+
+2. **JavaScript Execution Contexts & Lifecycle**
+
+   - How JavaScript Runs Code
+   - Types of Execution Contexts
+     - Global Execution Context
+     - Functional Execution Context
+   - Execution Context Lifecycle (Step-by-Step)
+     - Memory Creation Phase
+     - Execution Phase  
+       <br/>
+
+3. **Call Stack in JavaScript**
+   - What is Call Stack?
+   - How Call Stack Works with examples

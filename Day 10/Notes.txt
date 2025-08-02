@@ -1,0 +1,214 @@
+
+:: Day 10 ::
+
+
+==============================================
+IIFE (Immediately Invoked Function Expression)
+==============================================
+
+
+What is IIFE?
+-------------
+
+→ IIFE means "Immediately Invoked Function Expression".
+→ It is a function that runs as soon as it is defined.
+→ This type of function is not called later — it runs instantly.
+
+
+Why use IIFE?
+-------------
+
+→ To avoid polluting the global scope
+→ To create a private scope (no variable leakage outside)
+→ To run setup code once (for example: connecting to database, initial settings)
+
+Important Rules
+---------------
+
+→ Function definition must be wrapped in ()
+→ End with a semicolon ;
+→ This tells JS that it's an expression and should run immediately
+
+
+====================================================
+JavaScript Execution Contexts, Lifecycle, and Phases
+====================================================
+
+
+How JavaScript runs code?
+-------------------------
+
+→ JavaScript runs code using something called "Execution Context".
+→ Think of it like a box where the code is prepared and executed.
+
+
+Types of Execution Contexts
+---------------------------
+
+    1. Global Execution Context
+    2. Functional Execution Context
+    3. Eval Execution Context (not used much)
+
+
+1. Global Execution Context
+---------------------------
+
+This is created automatically when your JavaScript program starts.
+It does 2 things:
+    * Creates global memory space
+    * Runs your code line by line
+
+It also provides the global object to 'this':
+    * In browser: window
+    * In Node.js: empty object {}
+
+This context is created "only once".
+
+
+2. Functional Execution Context
+-------------------------------
+
+Every time a function is called, JS creates a new box for it.
+That box is called "Functional Execution Context".
+JS uses the same two phases inside it:
+    → Memory Creation Phase
+    → Execution Phase
+
+Once the function finishes running, this context is deleted.
+
+
+Execution Context Lifecycle (Step-by-Step)
+------------------------------------------
+
+→ Let’s understand this with a real story:
+
+Step 1: JS starts → Creates Global Execution Context.
+
+    Code example:
+
+        let val1 = 10;
+        let val2 = 5;
+
+        function addNum(num1, num2) {
+            let total = num1 + num2;
+            return total;
+        }
+
+        let result1 = addNum(val1, val2);
+        let result2 = addNum(10, 2);
+
+
+Global Execution Context - "Memory Creation Phase":
+-------------------------------------------------
+    * val1 → undefined
+    * val2 → undefined
+    * addNum → function stored
+    * result1 → undefined
+    * result2 → undefined
+
+JS prepares space in memory before running.
+
+
+Global Execution Context - "Execution Phase":
+-------------------------------------------
+    * val1 → 10
+    * val2 → 5
+    * result1 → addNum(10, 5) → triggers function call
+    * result2 → addNum(10, 2) → triggers another function call
+
+Each time addNum is called:
+    → JS creates a new Functional Execution Context
+
+
+Functional Execution Context - "Memory Phase":
+--------------------------------------------
+    * num1 → undefined
+    * num2 → undefined
+    * total → undefined
+
+
+Functional Execution Context - "Execution Phase":
+-----------------------------------------------
+    * num1 → 10
+    * num2 → 5
+    * total → 15
+    * return 15
+
+After this, the function context is removed from memory.
+
+→ Same happens again for the second call to addNum(10, 2).
+
+
+========================
+Call Stack in JavaScript
+========================
+
+
+What is Call Stack?
+-------------------
+
+Call Stack is like a stack of plates.
+    * Last plate added is the first to be removed
+
+JS uses this to keep track of function calls.
+It uses "LIFO": Last In, First Out
+
+
+How Call Stack works
+--------------------
+
+When JS runs a function:
+    → It adds that function to the top of the stack
+
+When function finishes:
+    → It removes the function from the stack
+
+
+Example: Simple Sequence
+------------------------
+
+Code:
+
+    function one() { }
+    function two() { }
+    function three() { }
+
+    one();
+    two();
+    three();
+
+Call Stack Order:
+
+    * one() added → runs → removed
+    * two() added → runs → removed
+    * three() added → runs → removed
+
+
+Example: Nested Functions
+-------------------------
+
+Code:
+
+    function one() {
+        function two() {
+            function three() {
+                console.log("inside three");
+            }
+            three();
+        }
+        two();
+    }
+    one();
+
+Call Stack Step-by-Step:
+
+    * one() added
+    * two() added inside one()
+    * three() added inside two()
+
+Now three() finishes first → removed
+
+Then two() finishes → removed
+
+Then one() finishes → removed
+
