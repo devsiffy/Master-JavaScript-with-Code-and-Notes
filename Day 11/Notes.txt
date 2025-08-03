@@ -1,0 +1,151 @@
+
+:: Day 11 ::
+
+
+==========================
+Control Flow in JavaScript
+==========================
+
+Control flow means the order in which code runs in a program.
+
+In JavaScript, we can control how our code works by using different statements like:
+    * if-else
+    * switch
+    * ternary operator
+    * loops (like for loop)
+    * break and continue
+
+
+if-else Statement
+-----------------
+
+if-else is used when we want to run different code based on a condition.
+
+If the condition is true → it runs the "if" block.
+
+If the condition is false → it runs the "else" block.
+
+    * You can also write only the "if" block.
+    * You can use multiple conditions with "else if".
+    * You can also use "!" to reverse the condition.
+
+    → Example:
+        * if (isLoggedIn) → runs if user is logged in
+        * if (!isLoggedIn) → runs if user is not logged in
+
+**Double NOT (!!)** is a trick to convert any value into true or false.
+
+    * !!"hello" → true
+    * !!0 → false
+    * !!undefined → false
+
+**Logical Operators:**
+    * AND (&&): both conditions must be true
+    * OR (||): at least one condition is true
+    * NOT (!) → reverses the value
+
+
+switch Statement
+----------------
+
+switch is used when we want to compare one value with many cases.
+
+It is good when there are many "if-else" conditions for the same variable.
+
+Each case is checked one by one. If a case matches, that code runs.
+
+Use "break" to stop checking after one case is true.
+
+    → If no case matches, use "default" to run some code.
+
+
+Truthy and Falsy Values
+-----------------------
+
+JavaScript has special values that are treated as "false".
+
+**Falsy Values:**
+    * false
+    * 0
+    * -0
+    * 0n (BigInt zero)
+    * ""
+    * null
+    * undefined
+    * NaN
+
+All other values are **truthy**.
+
+**Some tricky truthy values:**
+    * "0" (string)
+    * "false" (string)
+    * " " (space)
+    * []
+    * {}
+    * function() {}
+
+Always remember these for condition checking.
+
+
+Ternary Operator
+----------------
+
+Ternary is a short form of if-else.
+
+    Syntax:
+        condition ? do_if_true : do_if_false;
+
+It is good for small checks.
+
+    → Example:
+        price < 50 ? say yes : say no;
+
+
+Nullish Coalescing Operator ( ?? )
+----------------------------------
+
+This operator is used when we want to give a default value only if the original value is **null** or **undefined**.
+
+It will **not** work if value is 0 or empty string. Only null or undefined.
+
+    → Example:
+        val = null ?? 10 → result is 10
+        val = undefined ?? 5 → result is 5
+        val = 0 ?? 5 → result is 0 (because 0 is not null/undefined)
+
+
+======================
+For Loop in JavaScript
+======================
+
+for loop is used to repeat some code again and again.
+
+    Syntax:
+        for (start; condition; step) {
+            run this code
+        }
+
+It is used when we know how many times we want to run the loop.
+
+**Nested Loop** → a loop inside another loop.
+    * Used for tables, patterns, etc.
+
+**Loop on an Array**
+    * We can loop through items in an array using for loop.
+
+
+for loop with break and continue
+--------------------------------
+
+**break** → stop the loop when a certain condition is true.
+
+    * Used to exit the loop early.
+
+**continue** → skip one loop turn, but keep looping.
+
+    * Used to skip certain values.
+
+    → Example:
+        If i == 5 → break → stops loop
+        If i == 5 → continue → skips 5, moves to next
+

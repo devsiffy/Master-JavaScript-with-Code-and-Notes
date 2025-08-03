@@ -269,3 +269,38 @@
 3. **Call Stack in JavaScript**
    - What is Call Stack?
    - How Call Stack Works with examples
+
+---
+
+<h3>📅 Day 11</h3>
+
+> 🌱 _"It’s not that I’m so smart, it’s just that I stay with problems longer."_
+
+1. **Control Flow Basics**
+
+   - Overview of Execution Order
+   - Conditional and Looping Statements  
+     <br />
+
+2. **Conditional Statements**
+
+   - `if`, `else if`, `else`
+   - Logical Operators (`&&`, `||`, `!`)
+   - Double NOT (`!!`) and Boolean Conversion
+   - `switch` Statement
+   - Ternary Operator (`? :`)
+   - Nullish Coalescing Operator (`??`)  
+     <br />
+
+3. **Truthy & Falsy Values**
+
+   - Falsy Value List
+   - Tricky Truthy Values
+     <br />
+
+4. **Loops in JavaScript**
+
+   - `for` Loop Syntax and Usage
+   - Nested Loops
+   - Looping through Arrays
+   - `break` and `continue` in Loops
