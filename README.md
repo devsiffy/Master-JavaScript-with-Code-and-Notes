@@ -304,3 +304,27 @@
    - Nested Loops
    - Looping through Arrays
    - `break` and `continue` in Loops
+
+---
+
+<h3>📅 Day 12</h3>
+
+> 🔄 _"Control the flow, shape the data — great code begins with great loops."_
+
+1. **JavaSript Loops**
+
+   - While & Do-While Loops
+   - forEach Method for Arrays
+     <br />
+
+2. **Iterating with For Loops**
+
+   - For...of Loop (Values in Arrays, Strings, Maps)
+   - For...in Loop (Keys/Indexes in Objects & Arrays)
+     <br />
+
+3. **Map Data Structure**
+
+   - Key-Value Pairs with Order
+   - Differences from Objects
+   - Iteration with for...of

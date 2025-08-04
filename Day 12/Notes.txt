@@ -1,0 +1,97 @@
+
+:: Day 12 ::
+
+
+========================
+JavaScript Loops and Map
+========================
+
+
+While Loop
+----------
+
+The while loop runs a block of code again and again "while the condition is true".
+
+→ It checks the condition "before" running the code.
+→ If the condition is false from the beginning, the loop will "not run".
+→ You can use it when you are not sure how many times the loop should run.
+
+
+Do-While Loop
+-------------
+
+The do-while loop runs the code block "first", and then checks the condition.
+
+→ It will "always run at least one time", even if the condition is false.
+→ Good for cases where one-time execution is needed before checking the condition.
+
+
+For...of Loop
+-------------
+
+The for...of loop is used to go through "values" in:
+
+    * Arrays
+    * Strings
+    * Maps
+
+→ It gives the "value" of each item, not the key or index.
+→ It does "not work on objects". Trying to use it on an object will give an error.
+→ Best for clean and simple loops when you only care about the values.
+
+
+For...in Loop
+-------------
+
+The for...in loop is used to go through "keys or indexes" in:
+
+    * Objects (keys)
+    * Arrays (indexes)
+
+→ It gives the "key" (for object) or "index" (for array).
+→ You can use the key/index to get the value.
+→ It "does not work correctly on maps" — even though it doesn’t give an error, the output is not useful.
+→ Best when looping through object properties.
+
+
+forEach Loop
+------------
+
+forEach is a "method of array". It is used to run a function for every item in the array.
+
+→ It is a "higher-order function", and it takes a "callback".
+
+→ Works well for:
+    * Arrays
+    * Arrays of objects
+
+→ It gives:
+    * Value
+    * Index (optional)
+    * The full array (optional)
+
+→ You "cannot use break or continue" in forEach. The loop will always go through all items.
+→ Mostly used for cleaner code and easy data handling.
+
+
+==================
+Map Data Structure
+==================
+
+A Map is a "collection of key-value pairs".
+
+→ Keys in a Map can be any type — string, number, object, etc.
+→ Map "keeps the order" of entries as you add them.
+
+→ It is different from an object:
+    * Object keys must be strings or symbols.
+    * Object does not guarantee key order.
+
+→ Maps are useful when you need:
+    * Custom key types
+    * Order of entries
+    * Clean looping using for...of
+
+→ for...of works great with Map to get [key, value] pairs.
+→ for...in should "not be used" with Map.
+
