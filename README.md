@@ -328,3 +328,22 @@
    - Key-Value Pairs with Order
    - Differences from Objects
    - Iteration with for...of
+
+---
+
+<h3>📅 Day 13</h3>
+
+> 🛠️ _"Fix the cause, not the symptom."_
+
+1. **Array Methods**
+
+   - `filter()` – Selecting values based on conditions
+   - `map()` – Transforming each value in an array
+   - `reduce()` – Combining all values into one result
+   - Method Chaining – Using multiple array methods together  
+     <br />
+
+2. **DOM Basics and Tree**
+
+   - What is DOM? – Understanding the document tree structure
+   - `window` and `document` Objects – Connecting JavaScript to the browser and webpage

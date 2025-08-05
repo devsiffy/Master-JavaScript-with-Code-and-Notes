@@ -1,0 +1,116 @@
+
+:: Day 13 ::
+
+
+=============
+Array Methods
+=============
+
+
+filter() Method
+---------------
+
+filter() is used to pick some values from an array based on a condition.
+It runs a function for each value in the array.  
+If the condition is true, the value is added to the new array.
+The original array does not change.
+You get a new array with only the values that match the condition.
+
+Use case:
+    → Get values greater than a number  
+    → Filter even or odd numbers  
+    → Pick items that match a keyword
+
+
+map() Method
+------------
+
+map() is used to change each value in the array.
+It runs a function on every value and makes a new array.
+The original array stays the same.
+You get a new array with updated values.
+
+Use case:
+    → Multiply each number  
+    → Add something to each item  
+    → Change string format (like uppercase)
+
+
+reduce() Method
+---------------
+
+reduce() is used to take all values in the array and make one result.
+
+It needs two things:
+    → a function with accumulator and current value  
+    → an initial value (starting point)
+
+The function runs on each item and adds the result to the accumulator.
+At the end, you get one single value.
+
+Use case:
+    → Add all numbers  
+    → Multiply all values  
+    → Count total items or totals from objects
+
+
+Method Chaining
+---------------
+
+You can use multiple array methods one after another.
+This is called "method chaining".
+It makes your code short and clean, but only if used correctly.
+
+In chaining:
+    → map can be used to change values  
+    → filter can remove unwanted values  
+    → You can use as many methods as needed
+
+Example idea:
+    → First: change values  
+    → Then: filter the result  
+    → Then: reduce if needed
+
+Always check step-by-step what each method is doing.
+
+
+===================
+DOM Basics and Tree
+===================
+
+
+What is DOM?
+------------
+
+DOM means "Document Object Model".
+When you open a webpage, the browser changes the HTML into a tree structure.
+Each HTML tag becomes a "node" (a part of the tree).
+The whole page is a "DOM tree".  
+You can see this tree using browser dev tools or refer to the file "dom_tree.png" in your folder.
+
+Why DOM is important:
+    → It lets JavaScript talk to HTML  
+    → You can change HTML using JavaScript  
+    → You can get, add, or remove elements
+
+
+window and document objects
+---------------------------
+
+"window" is the main object created by the browser.
+Everything in JavaScript (on the browser) is part of the window.
+"document" is a part of window. It connects JavaScript to the HTML page.
+
+Use window and document like this:
+    → window → controls browser-level things  
+    → document → controls webpage content
+
+To explore them:
+    → Use console.log(window)  
+    → Use console.log(document)  
+    → Use console.dir(document) to see full structure
+
+Why it matters:
+    → You need document to select or change HTML elements  
+    → You need window to work with alerts, timers, etc.
+
