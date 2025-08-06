@@ -1,0 +1,103 @@
+
+:: Day 14 ::
+
+
+===========================
+DOM (Document Object Model)
+===========================
+
+DOM is a tree-like structure of HTML. It is a way to access and change the HTML content using JavaScript. We can think of the DOM as a bridge between HTML and JavaScript.
+
+Using DOM, we can:
+    * Read HTML content
+    * Change HTML content
+    * Add or remove elements
+    * Change styles and attributes
+    * React to user actions
+
+
+DOM Selectors
+-------------
+
+Selectors are methods to get HTML elements in JavaScript.
+
+There are many types:
+    * getElementById("id") → selects one element by ID
+    * getElementsByClassName("class") → selects many elements by class
+    * getElementsByTagName("tag") → selects many elements by tag
+    * querySelector("selector") → selects first matching element
+    * querySelectorAll("selector") → selects all matching elements
+
+Notes:
+    * getElementsByClassName() and getElementsByTagName() return HTMLCollection
+    * querySelectorAll() returns NodeList
+    * HTMLCollection and NodeList are not real arrays
+    * To use array methods, convert them first:
+        - Array.from(listItems)
+
+
+HTMLCollection vs. NodeList
+---------------------------
+
+    * HTMLCollection:
+        - Live collection (changes if DOM changes)
+        - Does not support forEach directly
+
+    * NodeList:
+        - Static collection (does not change if DOM changes)
+        - Supports forEach directly
+
+
+DOM Properties
+--------------
+
+After selecting elements, we can use properties:
+    * innerText → text visible to user
+    * textContent → all text inside element
+    * innerHTML → HTML content inside element
+    * getAttribute("attr") → get attribute value
+    * setAttribute("attr", "value") → set attribute value
+
+Example:
+    * Change text: title.innerText = "JS Course"
+    * Change class: title.setAttribute("class", "main-heading")
+
+
+DOM Styling
+-----------
+
+We can change element styles using style property.
+
+Example:
+    subHeading.style.backgroundColor = "#0a562c"
+    subHeading.style.padding = "10px"
+    subHeading.style.borderRadius = "12px"
+
+
+DOM Traversing
+--------------
+
+We can move between elements:
+    * parentElement → get parent of element
+    * children → get child elements
+    * nextSibling → get next element
+    * previousSibling → get previous element
+
+
+================
+DOM Manipulation
+================
+
+We can create and add elements using JavaScript.
+
+Steps to create elements:
+    1. Create element: document.createElement("tag")
+    2. Set attributes: element.setAttribute("attr", "value")
+    3. Set text: element.innerText = "text"
+    4. Add to DOM: parent.append(child)
+
+Example:
+    * Create div and add to body
+    * Create h1, set text, and append to div
+    * Create ul and li, loop to add multiple items
+

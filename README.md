@@ -347,3 +347,29 @@
 
    - What is DOM? – Understanding the document tree structure
    - `window` and `document` Objects – Connecting JavaScript to the browser and webpage
+
+---
+
+<h3>📅 Day 14</h3>
+
+> 🌱 _"DOM connects HTML and JavaScript, letting us manipulate web pages dynamically."_
+
+1. **DOM Selection & Collections**
+
+   - Selectors: `getElementById`, `getElementsByClassName`, `querySelector`, etc.
+   - HTMLCollection vs NodeList
+   - Converting to Arrays for Iteration
+     <br />
+
+2. **DOM Properties & Methods**
+
+   - Accessing/Changing Text and HTML (`innerText`, `innerHTML`)
+   - Managing Attributes (`getAttribute`, `setAttribute`)
+   - Inline Styling (`style` property)
+   - Navigating Between Elements: parent, children, siblings
+     <br />
+
+3. **DOM Manipulation**
+   - Creating & Appending Elements
+   - Setting Attributes and Text
+   - Looping for Multiple Elements
