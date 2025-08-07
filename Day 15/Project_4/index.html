@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project 4</title>
+  </head>
+  <body>
+    <img
+      src="https://images.pexels.com/photos/707837/pexels-photo-707837.jpeg?_gl=1*14pa00s*_ga*MTU4ODg5NTU5MC4xNzU0NTU0Njk2*_ga_8JE65Q40S6*czE3NTQ1NjQ3NjAkbzIkZzEkdDE3NTQ1NjQ5ODkkajMxJGwwJGgw"
+      alt="Background"
+    />
+
+    <div id="main">
+      <div id="btn-wrapper">
+        <button id="start-game">Start Now</button>
+        <!-- <button id="end-game" class="turned-off" disabled>End</button> -->
+      </div>
+
+      <form id="input-data">
+        <div id="field">
+          <label for="number">Guess the Number (1 - 100)</label>
+          <input type="number" id="number" required disabled />
+          <div id="hint">Hint: <span>...</span></div>
+        </div>
+        <button type="submit" class="turned-off" disabled>Submit</button>
+      </form>
+
+      <div id="display-info">
+        <div id="your-guesses">Your Guesses: [ <span>empty</span> ]</div>
+        <div id="remaining">Remaining Attempts: <span>0</span></div>
+        <div id="result">Result: <span>Pending...</span></div>
+        <div id="generated-number">Number is: <span>...</span></div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

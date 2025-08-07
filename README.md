@@ -373,3 +373,23 @@
    - Creating & Appending Elements
    - Setting Attributes and Text
    - Looping for Multiple Elements
+
+---
+
+<h3>📅 Day 15</h3>
+
+> ✨ _"Web interactivity grows when you can change or remove elements dynamically."_
+
+1. **DOM Manipulation: Edit & Delete Elements**
+
+   - Enhancing interactivity and user experience on real websites
+   - Replace content dynamically using `replaceWith()`
+   - Remove elements with `remove()` method
+     <br />
+
+2. **Mini JavaScript Projects (DOM Practice)**
+
+   - Project 1: Background Color Changer
+   - Project 2: BMI Calculator
+   - Project 3: Digital Clock
+   - Project 4: Guess the Number Game

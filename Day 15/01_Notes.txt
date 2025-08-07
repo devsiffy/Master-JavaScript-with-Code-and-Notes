@@ -1,0 +1,55 @@
+
+:: Day 15 ::
+
+
+============================
+DOM Edit and Delete Elements
+============================
+
+
+Why Edit and Delete?
+--------------------
+
+In real websites, we often need to change or remove things on the page.
+
+For example:
+    * Edit a list item when user clicks "Edit"
+    * Delete an item when user clicks "Delete"
+    * Update content without reloading the page
+
+These actions make websites more interactive and user-friendly.
+
+
+How to Edit Elements
+--------------------
+
+To "edit" an element in the DOM, we usually:
+
+    * Create a new element
+    * Add the new content to it
+    * Use the replaceWith() method to replace the old element
+
+Example steps:
+    * Find the old element you want to change
+    * Create a new element (like a new <li>)
+    * Add new text to the new element
+    * Replace the old one using replaceWith()
+
+This keeps the list fresh and updated with the new data.
+
+
+How to Delete Elements
+----------------------
+
+To "delete" an element in the DOM:
+
+    * Find the element
+    * Use the remove() method
+
+This will remove the element from the page completely.
+
+You can delete:
+    * The first item in a list
+    * The last item
+    * Any specific item using querySelector or other methods
+

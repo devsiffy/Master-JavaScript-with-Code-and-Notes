@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project 2</title>
+  </head>
+  <body>
+    <img
+      src="https://images.pexels.com/photos/841131/pexels-photo-841131.jpeg?_gl=1*wxoxwo*_ga*MTU4ODg5NTU5MC4xNzU0NTU0Njk2*_ga_8JE65Q40S6*czE3NTQ1NTQ2OTUkbzEkZzEkdDE3NTQ1NTUwMTEkajgkbDAkaDA."
+      alt="Background"
+    />
+
+    <h1>BMI Calculator</h1>
+
+    <div id="wrapper">
+      <div id="calculator">
+        <form>
+          <div class="fields">
+            <label for="weight">Weight (kg)</label>
+            <input type="text" id="weight" />
+            <div class="alertFields"></div>
+          </div>
+
+          <div class="fields">
+            <label for="height">Height (feet)</label>
+            <input type="text" id="height" />
+            <div class="alertFields"></div>
+          </div>
+
+          <button type="submit">Calculate</button>
+        </form>
+      </div>
+
+      <div id="guide">
+        <table>
+          <thead>
+            <tr>
+              <td>BMI</td>
+              <td>Status</td>
+            </tr>
+            <tr>
+              <td>&le; 18.4</td>
+              <td>Underweight</td>
+            </tr>
+            <tr>
+              <td>18.5 - 24.9</td>
+              <td>Normal</td>
+            </tr>
+            <tr>
+              <td>25.0 - 39.9</td>
+              <td>Overweight</td>
+            </tr>
+            <tr>
+              <td>&ge; 40.0</td>
+              <td>Obese</td>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+
+    <div id="result">
+      <h3>Your BMI: <span id="bmi-value">waiting for values...</span></h3>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

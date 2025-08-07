@@ -1,0 +1,13 @@
+
+:: Day 15 ::
+
+
+Build JS small projects (practice) to apply actual logic and concepts that you learned till now about DOM and few others.
+
+I build these following projects;
+
+Project 1: Background Color Changer
+Project 2: BMI Calculator
+Project 3: Digital Clock
+Project 4: Guess the Number Game
+
