@@ -1,0 +1,148 @@
+
+:: Day 16 ::
+
+
+==========================
+JavaScript Event Listeners
+==========================
+
+JavaScript can listen to user actions like clicks, key presses, or mouse moves.  
+When something happens, we can run some code in response.  
+These actions are called "events", and the code that runs is called an "event listener".
+
+
+What is an Event Listener
+-------------------------
+
+An event listener is a function that runs when a specific event happens.  
+
+Example:  
+    * A user clicks a button  
+    * A user types in an input box  
+    * A user moves the mouse over an image  
+
+
+=====================================
+Different Ways to Add Event Listeners
+=====================================
+
+
+1. Inline Event Listeners (Old way, not recommended)
+-------------------------
+
+We can add an event directly in HTML using the event name.
+
+Example:  
+    <button onclick="alert('Hello')">Click Me</button>
+
+Problems with inline:  
+    * HTML and JavaScript are mixed together (harder to manage)  
+    * Cannot easily remove or change the listener later  
+
+
+2. Using Element Properties (Better, but still not the best)
+---------------------------
+
+We can use JavaScript and set an event property like onclick.
+
+Example:  
+    let btn = document.querySelector("button");  
+    btn.onclick = function() {  
+        alert("Hello");  
+    };
+
+Limitations:  
+    * Only one function can be assigned for the same event using this method.  
+
+
+3. Using addEventListener() (Best and modern way)
+---------------------------
+
+We can use addEventListener() to attach an event.
+
+Example:  
+    let btn = document.querySelector("button");  
+    btn.addEventListener("click", function() {  
+        alert("Hello");  
+    });
+
+Advantages:  
+    * Can add multiple event listeners for the same event.  
+    * Can control event propagation (bubbling or capturing).  
+    * Can remove the event listener when needed.  
+
+
+===============================
+Event Object in Event Listeners
+===============================
+
+When an event happens, the browser sends an event object to the listener function.  
+This object has useful information about the event.
+
+Example:  
+    element.addEventListener("click", function(event) {  
+        console.log(event.type);  
+    });
+
+Important properties:  
+    * type → The type of event (click, keydown, etc.)  
+    * timeStamp → Time when event happened  
+    * target → The element where the event happened  
+    * currentTarget → The element that has the event listener  
+    * toElement / srcElement → Older ways to find the target (for older browsers)  
+    * clientX, clientY → Mouse position inside the browser window  
+    * screenX, screenY → Mouse position on the screen  
+    * altKey, ctrlKey, shiftKey → true if these keys were pressed during the event  
+    * keyCode → Number of the key pressed (mainly for keyboard events)  
+
+Important methods:  
+    * preventDefault() → Stops the default action (example: stops a link from opening a new page)  
+    * stopPropagation() → Stops the event from going to parent elements  
+
+
+=================
+Event Propagation
+=================
+
+When an event happens on an element inside other elements, it can also happen on the parents.  
+This is called event propagation.  
+There are two main phases:  
+
+
+1. Event Bubbling (default)
+-----------------
+
+The event starts from the target element and goes up to the parent elements.  
+
+Example:  
+    If you click on an image inside a div, first the image click is handled,  
+    then the div's click is handled, and so on.
+
+We can stop bubbling with:  
+    event.stopPropagation();
+
+
+2. Event Capturing
+------------------
+
+The event starts from the top parent and goes down to the target element.  
+We can use capturing by setting the third parameter in addEventListener to true.
+
+Example:  
+    element.addEventListener("click", handler, true);
+
+
+================
+preventDefault()
+================
+
+Some HTML elements have default actions.  
+We can stop them using preventDefault().
+
+Example:  
+    document.querySelector("a").addEventListener("click", function(e) {  
+        e.preventDefault();  
+    });
+
+This will stop a link from opening another page.  
+

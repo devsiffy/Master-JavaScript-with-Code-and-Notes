@@ -393,3 +393,34 @@
    - Project 2: BMI Calculator
    - Project 3: Digital Clock
    - Project 4: Guess the Number Game
+
+---
+
+<h3>📅 Day 16</h3>
+
+> 🎯 _"Events are the heartbeat of interactive web pages — learn to listen well."_
+
+1. **JavaScript Event Listeners**
+
+   - Definition and Purpose of Event Listeners
+   - Common Examples of Events (click, keypress, mouseover)  
+     <br />
+
+2. **Different Ways to Add Event Listeners**
+
+   - Inline Event Listeners (Old Method)
+   - Using Element Properties (`onclick`)
+   - Using `addEventListener()` (Modern Best Practice)  
+     <br />
+
+3. **Event Object in Event Listeners**
+
+   - Event Object
+   - Event Object Methods
+   - Event Object Properties
+     <br />
+
+4. **Event Propagation**
+
+   - Event Bubbling
+   - Event Capturing
