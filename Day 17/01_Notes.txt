@@ -1,0 +1,151 @@
+
+:: Day 17 ::
+
+
+============================
+JavaScript Default Behaviour
+============================
+
+JavaScript works in a synchronous and single-thread way.
+
+Synchronous means that JavaScript runs one line of code at a time, in order.  
+It does not move to the next line until the current line is finished.
+
+Single-thread means JavaScript has only one main line of work (one call stack).  
+It cannot run two different pieces of JavaScript code at the exact same time in the same thread.
+
+Because of this, if one task takes a long time, other tasks must wait.  
+This is why we need special techniques like asynchronous code to avoid delays.
+
+
+=================
+Execution Context
+=================
+
+Execution Context is the environment where JavaScript code runs.  
+When JavaScript runs, it creates different contexts for different situations.
+
+Parts of Execution Context
+--------------------------
+
+1. Memory Heap  
+   Memory Heap is the place where JavaScript stores values like objects, functions, and variables.  
+   Think of it as a storage room for data.
+
+2. Call Stack  
+   Call Stack is a list that keeps track of the functions that are being run.  
+   When a function starts, it is added to the stack.  
+   When the function finishes, it is removed from the stack.  
+   The function on top of the stack is always the one running right now.
+
+Example:
+
+    function greet() {
+        console.log("Hello");
+    }
+
+    greet();
+
+    Steps:
+    * Call stack is empty.
+    * greet() is added to the stack.
+    * console.log() is added on top of greet().
+    * console.log() finishes and is removed.
+    * greet() finishes and is removed.
+    * Call stack is empty again.
+
+
+==================================
+Blocking Code vs Non-blocking Code
+==================================
+
+Blocking Code means the code stops everything else until it finishes.  
+This can make the program slow if the task takes too long.
+
+Example of blocking code:
+
+    let result = longRunningTask();
+    console.log(result);
+
+Non-blocking Code means the code starts the task but does not wait for it to finish.  
+The program can keep doing other things.  
+When the task is done, it will notify the program (callback, promise, etc.).
+
+Example of non-blocking code:
+
+    longRunningTaskAsync(function(result) {
+        console.log(result);
+    });
+
+    console.log("Task started...");
+
+
+==========================
+How Async Works Internally
+==========================
+
+
+Main Parts
+----------
+
+1. JS Engine: Call Stack and Memory Heap  
+   * Call Stack: Runs the functions in order.  
+   * Memory Heap: Stores data and objects.
+
+2. Web API Environment  
+   * This is provided by the browser (or Node.js in server-side JavaScript).  
+   * Handles things like DOM APIs, timers (setTimeout), fetch requests, event listeners.
+
+3. Register Callback  
+   * When you call a function like setTimeout or fetch, the Web API runs it.  
+   * After it finishes, it sends the result as a callback function.
+
+4. Task Queue  
+   * This is where callbacks wait until the Call Stack is free.  
+   * Normal callbacks from events or setTimeout go here.
+
+5. Fetch & Promise  
+   * Fetch requests go to the Web API environment.  
+   * Promises are handled in a special way with a higher priority queue.
+
+6. High Priority Queue (Microtask Queue)  
+   * Promises and Mutation Observers go here.  
+   * Code in this queue runs before the normal Task Queue.
+
+
+Flow of Async
+-------------
+
+    → Code runs in the Call Stack.
+    → If it is a normal function, it finishes in order.
+    → If it calls a Web API (e.g., setTimeout, fetch), that task runs in Web API environment.
+    → When done, the result is sent to the right queue (Task Queue or High Priority Queue).
+    → Event Loop checks if the Call Stack is empty.
+    → If empty, it takes tasks from High Priority Queue first, then Task Queue.
+    → Task runs in the Call Stack.
+
+
+Simple Example
+--------------
+
+    console.log("Start");
+
+    setTimeout(function() {
+        console.log("Timeout done");
+    }, 0);
+
+    Promise.resolve().then(function() {
+        console.log("Promise done");
+    });
+
+    console.log("End");
+
+Steps:
+* "Start" is logged immediately.
+* setTimeout callback goes to Task Queue.
+* Promise callback goes to High Priority Queue.
+* "End" is logged.
+* Event Loop checks queues.
+* Promise callback runs first (High Priority Queue).
+* Then setTimeout callback runs (Task Queue).
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #container-1 {
+        margin-bottom: 4rem;
+      }
+    </style>
+    <title>Async with its Projects</title>
+  </head>
+  <body>
+    <div id="container-1">
+      <h2>Async Basic</h2>
+      <p id="msg">Pending...</p>
+      <button id="start-btn">start</button>
+      <button id="stop-btn">stop</button>
+    </div>
+
+    <div id="container-2">
+      <h2>Async Projects</h2>
+      <ul>
+        <li>
+          <a href="./Project_1/index.html"
+            >Project 1 - Continously Background Color Changer</a
+          >
+        </li>
+        <li>
+          <a href="./Project_2/index.html"
+            >Project 2 - Keyboard Keys Detector</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      const msg = document.querySelector("#msg");
+      const startBtn = document.querySelector("#start-btn");
+      const stopBtn = document.querySelector("#stop-btn");
+      let refId;
+
+      startBtn.addEventListener("click", function () {
+        msg.innerText = "setTimeout() is called";
+        refId = setTimeout(() => {
+          msg.innerText = "Result: This is setTimeout (async)";
+        }, 3000);
+      });
+
+      stopBtn.addEventListener("click", function () {
+        clearTimeout(refId);
+        msg.innerText = "setTimeout() is stopped";
+      });
+    </script>
+  </body>
+</html>

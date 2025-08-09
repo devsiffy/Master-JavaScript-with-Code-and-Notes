@@ -1,0 +1,92 @@
+
+:: Day 17 ::
+
+
+===========
+AJAX Basics
+===========
+
+AJAX means Asynchronous JavaScript and XML.
+
+It is not one single function or library.
+
+It is a way to get data from the server or send data to the server without refreshing the whole page.
+
+It can work with:
+    * XMLHttpRequest (old but still works in all browsers)
+    * fetch() API (modern way)
+    * Libraries like jQuery ($.ajax())
+
+
+===================
+XMLHttpRequest (XHR)
+===================
+
+XMLHttpRequest is a built-in JavaScript object.
+
+It helps your code talk to a server in the background.
+
+It is older than fetch(), but it is supported in all browsers.
+
+You can:
+    * Get data from a server
+    * Send data to a server
+
+
+How It Works
+------------
+
+1. Create an XMLHttpRequest object.
+2. Open the request with method (GET/POST) and the URL.
+3. Set any request headers (optional).
+4. Send the request.
+5. Listen for changes in readyState.
+6. When readyState is DONE, read the server's response.
+
+
+Ready State Values
+------------------
+
+    0 (UNSENT)            → Object created, but .open() not called yet
+    1 (OPENED)            → .open() called, request ready to be sent
+    2 (HEADERS_RECEIVED)  → Server responded, headers are ready
+    3 (LOADING)           → Response is being downloaded
+    4 (DONE)              → Response finished, data is ready
+
+
+Common Methods
+--------------
+
+    open(method, url)
+        Set request type (GET or POST) and the address (URL).
+
+    send([body])
+        Send the request.
+        Use body when sending POST data.
+
+    setRequestHeader(name, value)
+        Add extra information for the request (like content type).
+
+    abort()
+        Cancel the request.
+
+
+Handling the Response
+---------------------
+
+When readyState is 4 (DONE):
+    * Check if the status is OK (status 200).
+    * Get the response text with responseText.
+    * Convert JSON string to object using JSON.parse() if needed.
+    * Use the data in your page.
+
+
+Example Steps in Simple Words
+-----------------------------
+
+    * Make a new XMLHttpRequest object.
+    * Tell it where to go (URL) and how (GET/POST).
+    * Tell it what to do when the server sends a response.
+    * Send the request.
+    * When the response comes, use it in your page.
+

@@ -1,0 +1,119 @@
+
+:: Day 17 ::
+
+
+===============================
+setTimeout() and clearTimeout()
+===============================
+
+setTimeout()
+------------
+The setTimeout() function runs some code after a set time (delay).
+
+You give it two things:
+    * The code you want to run (can be a function)
+    * The time in milliseconds (1000 ms = 1 second)
+
+Example:
+    After 3000 milliseconds (3 seconds), run a message or function.
+
+Important:
+    * It runs only one time after the delay.
+    * It does not repeat.
+
+
+clearTimeout()
+--------------
+The clearTimeout() function stops a setTimeout() before it runs.
+
+Steps:
+    1. Save the setTimeout() in a variable (reference ID).
+    2. Use clearTimeout(reference ID) to stop it.
+
+Tip:
+    If you do not save the reference ID, you cannot stop it later.
+
+
+=================================
+setInterval() and clearInterval()
+=================================
+
+setInterval()
+-------------
+The setInterval() function runs code again and again after a fixed time gap.
+
+You give it two things:
+    * The code you want to run
+    * The time gap in milliseconds
+
+Example:
+    Change background color every 1 second.
+
+Important:
+    * It will keep running until you stop it.
+    * The time gap is the delay between each run.
+
+
+clearInterval()
+---------------
+The clearInterval() function stops a setInterval() from running again.
+
+Steps:
+    1. Save the setInterval() in a variable (reference ID).
+    2. Use clearInterval(reference ID) to stop it.
+
+Tip:
+    Without stopping it, it will run forever (or until the page closes).
+
+
+============================================
+Project: Continuous Background Color Changer
+============================================
+
+Idea:
+    * When user clicks "Start", background color changes every 1 second.
+    * Colors are random.
+    * When user clicks "Stop", it stops changing.
+
+Key Points:
+    * setInterval() is used for repeated changes.
+    * clearInterval() stops the process.
+    * Random color is made using hexadecimal values (0-9, A-F).
+
+
+=====================================
+Project: Keyboard Keys Detector Table
+=====================================
+
+Idea:
+    * Show each key pressed in a table.
+    * Table has columns: Key, Key Code, and Time Stamp.
+    * Space key is shown as "Space".
+
+Key Points:
+    * window.addEventListener("keydown", function(event) {...})
+    * Create table row dynamically.
+    * Append data to table each time a key is pressed.
+
+
+Keyboard Events Properties
+--------------------------
+
+A keyboard event happens when you press a key on the keyboard.
+
+Common events:
+    * keydown - happens when key is pressed down.
+    * keyup - happens when key is released.
+
+
+Event Object Properties
+-----------------------
+    * event.key       → The actual key pressed. Example: "a", "A", "1", "Enter"
+    * event.code      → The physical key code on the keyboard. Example: "KeyA", "Digit1"
+    * event.keyCode   → Old property (number code for key). Example: 65 for "A"
+    * event.timeStamp → Time in milliseconds from when the page was loaded.
+    * event.altKey    → true if Alt key is also pressed.
+    * event.ctrlKey   → true if Control key is also pressed.
+    * event.shiftKey  → true if Shift key is also pressed.
+    * event.repeat    → true if key is held down and repeats.
+

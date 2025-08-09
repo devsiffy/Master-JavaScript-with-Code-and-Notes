@@ -424,3 +424,45 @@
 
    - Event Bubbling
    - Event Capturing
+
+---
+
+<h3>📅 Day 17</h3>
+
+> ⚡ _"Understanding JavaScript’s flow is the first step to mastering async magic."_
+
+1. **JavaScript Execution & Flow**
+
+   - Default Behaviour (Synchronous & Single-thread)
+   - Execution Context (Memory Heap & Call Stack)
+   - Blocking vs Non-blocking Code
+     <br />
+
+2. **Asynchronous JavaScript**
+
+   - How Async Works Internally
+     - JS Engine & Web API Environment
+     - Task Queue vs Microtask Queue (High Priority Queue)
+     - Event Loop Flow & Example
+       <br />
+
+3. **Timers in JavaScript**
+
+   - `setTimeout()` & `clearTimeout()`
+   - `setInterval()` & `clearInterval()`
+   - Project: Continuous Background Color Changer
+     <br />
+
+4. **Keyboard Events**
+
+   - Keyboard Event Types
+   - Event Object Properties
+   - Project: Keyboard Keys Detector Table
+     <br />
+
+5. **AJAX Fundamentals**
+   - AJAX Basics & Use Cases
+   - `XMLHttpRequest` (XHR) Overview
+     - Ready State Values
+     - Common Methods (`open`, `send` etc.)
+     - Handling Responses
