@@ -466,3 +466,25 @@
      - Ready State Values
      - Common Methods (`open`, `send` etc.)
      - Handling Responses
+
+---
+
+<h3>📅 Day 18</h3>
+
+> ⚡ _"Mastering asynchronous code unlocks the real power of JavaScript."_
+
+1. **JavaScript Promises**
+
+   - Defining Promises: Purpose, States, and Usage
+   - Creating Promises with `resolve` & `reject`
+   - Handling Results: `then()`, `catch()`, and `finally()`
+   - Chaining with Thenables (`then()` chaining)
+     <br />
+
+2. **Working with fetch()**
+   - Overview of fetch() and Its Purpose
+   - Using fetch() with `then()` and `catch()`
+   - Using fetch() with `async/await`
+   - How fetch() Works Internally
+   - Why fetch() Replaced XMLHttpRequest (XHR)
+   - Advantages of fetch() over XHR

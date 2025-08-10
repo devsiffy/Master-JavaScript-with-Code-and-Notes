@@ -1,0 +1,63 @@
+
+:: Day 18 ::
+
+
+=================
+Defining Promises
+=================
+
+A Promise in JavaScript is an object that represents a task that will finish in the future.
+
+The task can be successful (resolved) or can fail (rejected).
+
+You can use a Promise when you need to wait for something to finish, like getting data from a server.
+
+A Promise has 3 states:
+    * pending  → the work is not finished yet
+    * fulfilled → the work is finished successfully
+    * rejected  → the work has failed
+
+
+===========================================
+Promises with resolve and reject parameters
+===========================================
+
+When you create a Promise, you give it a function with two parameters:
+    * resolve  → call this when the work is done successfully
+    * reject   → call this when the work has failed
+
+The function inside the Promise will usually run some code (for example: setTimeout or API call).
+
+If the work is successful, you use resolve() and you can pass some data inside it.
+
+If the work fails, you use reject() and you can pass an error message inside it.
+
+
+=============================
+then(), catch() and finally()
+=============================
+
+You can use these methods to handle what happens after the Promise finishes:
+
+    * then()    → runs when the Promise is resolved (successful)
+    * catch()   → runs when the Promise is rejected (failed)
+    * finally() → runs no matter if the Promise is resolved or rejected
+
+The then() method can also return some value. This value can be used in the next then() method (this is called chaining).
+
+
+===========================
+Thenables (then() chaining)
+===========================
+
+When you return something from a then() method, the next then() can receive that value.
+
+This is useful when you want to do a series of actions in order.
+
+Example:
+    * First then() gets the user object
+    * Second then() gets only the username from that object
+    * Third then() can use the username to do something else
+
+This is called "then chaining" or "thenables" because each then() waits for the previous one to finish.
+

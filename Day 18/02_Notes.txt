@@ -1,0 +1,82 @@
+
+:: Day 18 ::
+
+
+============
+fetch() Tool
+============
+
+The fetch() tool is a built-in function in JavaScript.
+
+It is used to request data from a server. It works with URLs.
+
+When you use fetch(), it returns a Promise. The Promise will be completed when the data comes back from the server.
+
+If the request is successful, you can get the data. If it fails, you can catch the error.
+
+
+=====================================
+Using fetch() with then() and catch()
+=====================================
+
+then() is used to handle the data when fetch() works successfully.
+
+catch() is used to handle any error that happens during fetch().
+
+The process is:
+    * Use fetch() with a URL
+    * Use then() to change the response into usable data (for example, JSON)
+    * Use another then() to work with the data
+    * Use catch() to handle errors
+
+
+==============================
+Using fetch() with async/await
+==============================
+
+async/await is a newer and easier way to write code with fetch().
+
+The process is:
+    * Make the function async
+    * Use await before fetch() to wait for the result
+    * Use await before response.json() to wait for the data conversion
+    * Use try...catch to handle errors
+
+
+============================
+How fetch() Works Internally
+============================
+
+fetch() starts an HTTP request to a server.
+
+It returns a Promise immediately. The Promise is waiting for the server's response.
+
+When the server responds, fetch() gives you a Response object. You must process it (for example, use .json()) to read the real data.
+
+If there is a network problem or the server is unreachable, fetch() will reject the Promise and go to catch() or throw an error in async/await.
+
+
+========================================================
+How fetch() Was Introduced and Which Problem It Resolves
+========================================================
+
+Before fetch(), JavaScript used XMLHttpRequest (XHR) to get data from servers.
+
+XHR was more complex, harder to read, and required more code.
+
+fetch() was introduced to make network requests easier to write and read.
+
+It uses Promises, which make code cleaner and simpler than callback-based XHR.
+
+
+==============================
+How fetch() is Better Than XHR
+==============================
+
+    * Simpler syntax and easier to read
+    * Uses Promises instead of callbacks
+    * Easier to chain actions (then, catch)
+    * Works well with async/await
+    * Better for modern JavaScript code
+    * Cleaner error handling
+
