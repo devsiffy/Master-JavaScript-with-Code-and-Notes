@@ -488,3 +488,37 @@
    - How fetch() Works Internally
    - Why fetch() Replaced XMLHttpRequest (XHR)
    - Advantages of fetch() over XHR
+
+---
+
+<h3>📅 Day 19</h3>
+
+> 💡 _"Objects are the heart of JavaScript — understand them, and the language opens up."_
+
+1. **Object-Oriented Programming (OOP) in JS**
+
+   - What is OOP & Why Use It
+   - Four Pillars: Abstraction, Encapsulation, Inheritance, Polymorphism
+     <br />
+
+2. **Creating & Managing Objects**
+
+   - Object Literals
+   - Constructor Functions
+   - `new` and `this` Keywords
+   - Importance of `new`
+     <br />
+
+3. **Prototype System**
+
+   - What is Prototype & Prototype Chain
+   - Everything is an Object (Hierarchy)
+   - `this` in Prototype Methods
+   - Prototype for All Objects vs Specific Types
+     <br />
+
+4. **Inheritance in JavaScript**
+
+   - Prototype-Based Inheritance
+   - Old Style: `__proto__` Linking
+   - Modern Style: `Object.setPrototypeOf()`

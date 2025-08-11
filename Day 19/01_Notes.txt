@@ -1,0 +1,179 @@
+
+:: Day 19 ::
+
+
+=================
+OOP in JavaScript
+=================
+
+What is OOP?
+------------
+
+OOP means Object-Oriented Programming.
+It is a way to write code using "objects".
+Objects help to keep related data and functions together.
+
+We use OOP to make our code:
+    * Easier to understand
+    * Easier to reuse
+    * Easier to manage in large projects
+
+OOP is helpful for working with real-world models like users, cars, books, etc.
+
+
+Why do we use OOP in JavaScript?
+--------------------------------
+
+    * It keeps code organized.
+    * It allows reuse of code using inheritance.
+    * It helps make flexible and easy-to-update code.
+    * It makes teamwork easier when many developers work together.
+
+
+===================
+Four Pillars of OOP
+===================
+
+1. Abstraction
+--------------
+
+Abstraction means hiding extra details.
+Show only what is important and hide the rest.
+
+    → Example: You can use a TV remote without knowing how it works inside.
+
+In code, we hide complex logic and only show useful parts.
+
+
+2. Encapsulation
+----------------
+
+Encapsulation means keeping data and functions together in one unit.
+
+    → This unit is called an object.
+
+It also means hiding inner details and protecting data.
+
+
+3. Inheritance
+--------------
+
+Inheritance means one object can take features from another object.
+It helps to reuse code.
+
+    → Example: A "Car" object can inherit from a "Vehicle" object.
+
+
+4. Polymorphism
+---------------
+
+Polymorphism means "many forms".
+In JavaScript, different objects can use the same function name but do different things.
+
+    → Example: Two objects can have a method called "draw()", but each draws in its own way.
+
+
+===========================
+Parts of OOP in JavaScript
+===========================
+
+1. Object Literals
+------------------
+
+Object literal is the simplest way to create an object.
+
+    → We use `{}` to define an object.
+
+It stores data in key-value pairs.
+
+    → Each key has a value. Value can be a string, number, array, or function.
+
+
+2. Constructor Functions
+------------------------
+
+Constructor function is a special function to create many similar objects.
+It helps to avoid writing same code again and again.
+
+    * It uses `this` keyword to set values.
+    * We use `new` keyword to create a new object.
+
+
+3. 'new' and 'this'
+-------------------
+
+`new` keyword creates a "new object".
+`this` refers to the current object.
+
+When we use `new`:
+    * A new empty object is created.
+    * `this` points to that new object.
+    * The function sets values for the new object.
+    * Finally, the new object is returned.
+
+
+============================
+Why 'new' is Very Important?
+============================
+
+If we forget to use `new`:
+    * All objects will share the same data.
+    * They will override each other.
+    * We will not get separate objects.
+
+With `new`, each object is a new copy.
+
+    * They have their own data.
+    * They do not affect each other.
+
+That’s why `new` is very important for constructor functions.
+
+
+=========================================
+JavaScript is Prototype-Based Inheritance
+=========================================
+
+In JavaScript, objects inherit from other objects.
+This is called "prototype-based inheritance".
+Every object has a hidden property called `__proto__`.
+
+    * This connects the object to its parent.
+
+Functions also have a property called `prototype`.
+
+    → We can add methods and properties to it.
+
+Inheritance works using this prototype chain.
+
+
+============================
+'this' Keyword - Its Context
+============================
+
+1. Global 'this' in Browser
+---------------------------
+
+In browser, `this` refers to the `window` object (global object).
+
+Example:
+    * If you run `console.log(this);` in global area, it shows 'window' object.
+
+
+2. Global 'this' in Node.js
+---------------------------
+
+In Node.js, `this` in global scope does "not" refer to `global` object.
+It refers to an empty object `{}`.
+
+
+3. 'this' inside Object
+-----------------------
+
+When we call a function using an object:
+    → `this` refers to the object itself.
+
+It helps to access other values of the object.
+
+Example:
+    * Inside `getUserInfo()` function, `this.username` gives the username of the object.
+

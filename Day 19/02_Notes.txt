@@ -1,0 +1,109 @@
+
+:: Day 19 ::
+
+
+=======================
+Prototype in JavaScript
+=======================
+
+What is Prototype?
+------------------
+
+In JavaScript, every function and object has a special property called "prototype".
+
+Prototype is like a hidden object. It helps in sharing properties and methods with other objects.
+
+This is very useful when we want to use same method in many objects without copying it again and again.
+
+
+Everything is an Object
+-----------------------
+
+In JavaScript, everything is based on "Object".
+Even arrays, strings, and functions are also objects behind the scenes.
+
+They follow a "prototype chain" like this:
+
+    Array --> Object --> null
+
+    String --> Object --> null
+
+    Function --> Object --> null
+
+    CustomObject --> Object --> null
+
+This is called "prototype hierarchy".  
+It means they all finally connect to "Object", and then to "null" (end of chain).
+
+
+The 'new' Keyword
+-----------------
+
+When we use the `new` keyword, many things happen automatically:
+
+    * A new empty object is created.
+    * The new object is linked to a prototype.
+    * The constructor function is called with 'this' pointing to the new object.
+    * The new object is returned.
+
+So `new` does a lot of work in just one line.
+Without `new`, the function will not return the new object, and 'this' will not work properly.
+
+
+The 'this' Keyword in Prototypes
+--------------------------------
+
+In prototype methods, `this` refers to the object that is calling the method.
+
+If you write a method inside a prototype, and then call that method using an object, `this` will point to that object.
+
+    * If object1 calls the method → `this` = object1
+    * If object2 calls the method → `this` = object2
+
+Always remember, `this` depends on "who is calling the method", not where it was defined.
+
+
+Prototype for All and Specific Types
+------------------------------------
+
+In JavaScript, we can add methods to all objects, or to specific data types.
+
+    * `Object.prototype` → adds method to "all objects"
+    * `Array.prototype` → adds method to "only arrays"
+    * `String.prototype` → adds method to "only strings"
+
+When you add a method to prototype, it is available to all objects of that type.
+
+Example:
+    * Add method to all arrays → use Array.prototype
+    * Add method to all strings → use String.prototype
+    * Add method to all objects → use Object.prototype
+
+But be careful:  
+Changing prototype of built-in types is powerful, but can create bugs if not used correctly.
+
+
+========================
+Inheritance in Prototype
+========================
+
+Prototype also helps in inheritance.  
+One object can use properties of another object using prototype.
+
+There are two ways to do inheritance:
+
+    → Old Style (Manual Linking)
+
+        * Use `__proto__` to connect two objects.
+        * Example: object2.__proto__ = object1
+        * object2 can now use all properties of object1.
+
+    → Modern Style (Using Method)
+
+        * Use `Object.setPrototypeOf(child, parent)`
+        * This is the preferred modern way.
+        * Example: Object.setPrototypeOf(TeachingSupport, Teacher)
+
+This is called "prototype inheritance".
+It helps in reusing code and organizing your objects better.
+
