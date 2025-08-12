@@ -1,0 +1,103 @@
+
+:: Day 20 ::
+
+
+==============================
+CALL METHOD AND 'THIS' KEYWORD
+==============================
+
+The call() method is used to call a function with a given value of 'this' and arguments.
+
+When a normal function is called, the 'this' keyword inside it points to the object that called the function.
+
+If a function is called normally (without an object), 'this' will usually refer to the global object (in browsers, it is 'window'), or undefined in strict mode.
+
+Sometimes, we need to run another function inside a function and make sure it uses the same 'this' as the outer function.  
+In such cases, we can use call() to manually set the value of 'this'.
+
+Example idea:
+    * call() passes the outer function's 'this' to the inner function.
+    * This way, properties set in the inner function are actually set in the outer function's object.
+
+
+=============================================
+OLDER METHOD OF CREATING OBJECTS (BEFORE ES6)
+=============================================
+
+Before ES6 classes, objects were often created using constructor functions.
+
+A constructor function is just a normal function but used with the 'new' keyword.
+
+Steps:
+    * Create a function that sets properties on 'this'.
+    * Use 'new' to create a new object.
+    * Use the function's prototype to add methods that all objects can share.
+
+Why use prototype?
+    * To save memory.
+    * If we define methods directly inside the constructor, every object will have its own copy of the method.
+    * With prototype, all objects share the same method from one place.
+
+
+====================
+CLASS CONCEPT IN ES6
+====================
+
+In ES6, 'class' is a new syntax to create objects in a cleaner way.
+
+A class can have:
+    * A constructor method (runs automatically when object is created)
+    * Properties (set inside constructor)
+    * Methods (functions inside the class that all objects share)
+
+Example idea:
+    * Write a class.
+    * Use 'new' keyword to create objects.
+
+Behind the scenes:
+    * The ES6 class is just a cleaner way to write the same logic as constructor functions with prototypes.
+    * JavaScript still uses prototype-based inheritance under the hood.
+
+Creating objects:
+    * Method 1: Using ES6 class
+    * Method 2: Using constructor function + prototype
+
+Both ways do the same thing internally.
+
+
+====================
+INHERITANCE IN CLASS
+====================
+
+Inheritance lets one class use properties and methods from another class.
+
+We use 'extends' to make a class inherit from another.
+
+The child class can:
+    * Use 'super()' inside its constructor to call the parent class constructor.
+    * Add new properties and methods.
+    * Use all methods from the parent class unless overridden.
+
+How it works:
+    * When we create an object from the child class, JavaScript connects the prototypes so the object can access both parent and child methods.
+    * This is called prototype chaining.
+
+
+=========================
+STATIC KEYWORD IN CLASSES
+=========================
+
+The 'static' keyword makes a method belong to the class itself, not to the objects created from it.
+
+This means:
+    * You call the method directly on the class.
+    * Objects created from the class cannot use this method.
+
+Why use static methods?
+    * For utility functions that are not tied to a single object.
+    * Example: creating IDs, doing calculations, or formatting data.
+
+Behavior:
+    * Static methods are not inherited by objects, but can be inherited by subclasses.
+    * Call them like: ClassName.methodName()
+

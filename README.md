@@ -522,3 +522,32 @@
    - Prototype-Based Inheritance
    - Old Style: `__proto__` Linking
    - Modern Style: `Object.setPrototypeOf()`
+
+---
+
+<h3>📅 Day 20</h3>
+
+> 🛠 _"Understanding `this`, object creation, and class mechanics is key to writing clean, powerful JavaScript."_
+
+1. **Working with `this` and Function Calls**
+
+   - Behavior of `this` in different contexts
+   - Using `call()` to manually set `this`
+     <br />
+
+2. **Object Creation Approaches**
+
+   - Pre-ES6: Constructor Functions & Prototypes
+   - ES6 Classes: Syntax and Behind-the-Scenes Prototype Inheritance
+     <br />
+
+3. **Class Features**
+
+   - Constructors, Properties, and Shared Methods
+   - Static Methods for Class-Level Utilities
+     <br />
+
+4. **Inheritance in JavaScript**
+   - `extends` for Class Inheritance
+   - `super()` for Parent Constructor Calls
+   - Prototype Chaining Mechanism
