@@ -1,0 +1,66 @@
+
+:: Day 21 ::
+
+
+====================
+Understanding bind()
+====================
+
+In JavaScript, the bind() method is used to control the value of 'this' inside a function.
+
+When we use a function as a callback (like in addEventListener), the 'this' inside that function may not refer to the object we expect.  
+Instead, it might point to another object, such as the element that triggered the event.
+
+Without bind():
+    * The 'this' inside the function might refer to a button or some other object.
+    * We cannot access other properties from the original object because 'this' is not pointing to it.
+
+With bind():
+    * The bind() method makes sure that 'this' inside the function always points to the object we want.
+    * It "locks" the 'this' value so that no matter how the function is called later, it uses the correct context.
+
+Early versions of React:
+    * In early React class components, developers often had to use bind() in the constructor to make sure methods could access 'this' correctly.
+    * Without it, calling a method like this.handleClick from JSX could cause 'this' to be undefined or point to the wrong object.
+
+
+============================
+Hidden Properties in Objects
+============================
+
+Some built-in JavaScript objects have properties that behave like constants.  
+For example, Math.PI always gives the same value, and trying to change it will not work.
+
+The reason:
+    * JavaScript properties have hidden settings, called property descriptors.
+    * These descriptors decide if a property can be changed (writable), deleted (configurable), or shown in loops (enumerable).
+    * For Math.PI, writable and configurable are set to false.
+    * That is why it cannot be changed, but it also does not give an error when we try.
+
+
+Checking a property’s hidden settings
+------------------------------------
+
+We can use Object.getOwnPropertyDescriptor(object, "propertyName") to see a property’s settings.
+
+    * writable: false → value cannot be changed
+    * enumerable: false → will not show in loops like for...in or Object.entries
+    * configurable: false → cannot delete or reconfigure the property
+
+
+=======================================================
+Setting hidden properties for our own object properties
+=======================================================
+
+We can use Object.defineProperty() to set our own hidden property settings.
+
+Example ideas:
+    * Make a property read-only (set writable to false)
+    * Hide a property from loops (set enumerable to false)
+    * Lock a property so it cannot be deleted or changed (set configurable to false)
+
+Steps:
+    1. Create an object with normal properties.
+    2. Use Object.defineProperty() to change the writable, enumerable, or configurable values.
+    3. Test by trying to update the property or loop through the object.
+

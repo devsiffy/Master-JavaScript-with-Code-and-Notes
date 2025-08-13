@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bind Method</title>
+  </head>
+  <body>
+    <button>I am a button</button>
+
+    <script>
+      class React {
+        constructor() {
+          this.library = "React";
+          this.server = "http://localhost:3000";
+
+          /*
+            Problem;
+            This below code is not works as expected, because when
+            button is clicked the "handleClick" is called, and
+            keyword 'this' inside the "handleClick" also have the
+            reference/context of button, but still no access of
+            object's other properties i.e., library, server
+          */
+
+          //   document
+          //     .querySelector("button")
+          //     .addEventListener("click", this.handleClick);
+
+          /*
+            Solution;
+            So, we use bind method that attach the references/contexts
+            of both the button as well as the object
+          */
+
+          document
+            .querySelector("button")
+            .addEventListener("click", this.handleClick.bind(this));
+        }
+
+        handleClick() {
+          console.log("Button is clicked");
+          console.log(this);
+          console.log(this.server);
+        }
+      }
+
+      const app = new React();
+    </script>
+  </body>
+</html>
+
+<!-- 
+
+NOTE:-
+Basically, at the initial stages/versions of ReactJS, it looks
+like this not exact the similar, but provide and use similar
+type of concept.
+
+-->

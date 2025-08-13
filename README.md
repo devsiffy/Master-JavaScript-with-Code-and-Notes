@@ -551,3 +551,29 @@
    - `extends` for Class Inheritance
    - `super()` for Parent Constructor Calls
    - Prototype Chaining Mechanism
+
+---
+
+<h3>📅 Day 21</h3>
+
+> 💡 _"Mastering the little-known parts of JavaScript is what turns good code into great code."_
+
+1. **Understanding `bind()`**
+
+   - Controlling `this` inside functions
+   - Callback context issues without `bind()`
+   - Using `bind()` in early React class components  
+     <br />
+
+2. **Hidden Properties in Objects**
+
+   - Built-in constants like `Math.PI`
+   - Property descriptors (`writable`, `enumerable`, `configurable`)
+   - Checking descriptors with `Object.getOwnPropertyDescriptor()`  
+     <br />
+
+3. **Setting Hidden Properties for Custom Objects**
+
+   - Using `Object.defineProperty()`
+   - Making properties read-only, hidden in loops, or locked
+   - Practical steps to configure property settings
