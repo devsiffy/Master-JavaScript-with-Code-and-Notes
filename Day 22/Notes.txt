@@ -1,0 +1,97 @@
+
+:: Day 22 ::
+
+
+===================
+Getters and Setters
+===================
+
+Getters and setters are special functions in JavaScript that help you get and set the value of a property.
+
+You can write getters and setters in different ways:
+    * In classes (modern way)
+    * In constructor functions (older way)
+    * In objects (older way)
+
+Why use getters and setters?
+    * They control how a property is read or changed.
+    * You can add extra logic while setting or getting a value.
+    * You can make some properties "look" private by using a different property name inside.
+
+Important points about getters and setters in classes:
+    * You cannot use the same property name in both the constructor and the setter. It will cause an error.
+    * Instead, use a different internal name (often starting with an underscore _).
+    * Example: The real data is saved in _email, but outside code can use user.email.
+
+In classes:
+    → Getter is a function that returns a value when you read the property.
+    → Setter is a function that runs when you change the property.
+    → You access getters and setters like normal properties, not like functions.
+
+In constructor functions:
+    * Use Object.defineProperty() to define getters and setters.
+    * This was common before ES6 classes existed.
+
+In objects:
+    * You can write get and set directly inside the object.
+    * This is simple for small programs or special cases.
+
+
+Private Fields in Classes
+-------------------------
+
+Older way (before real private fields):
+    * Developers used an underscore before a property name to show it is "private" (example: _password).
+    * This was only a naming habit. Other code could still read or change it.
+    * It is not real privacy.
+
+Modern way (ES2022 and later):
+    * Use # before the property name to make it truly private (example: #password).
+    * Private fields cannot be read or written outside the class.
+    * Only getters and setters inside the same class can use them.
+
+Example:
+    * Inside the class: this.#password works.
+    * Outside the class: obj.#password → This will cause an error.
+
+
+===============
+Lexical Scoping
+===============
+
+Lexical scoping means:
+    * An inner function can use variables that are defined in its outer function.
+    * The inner function remembers the variables from the place where it was created, not from where it is called.
+
+Example idea:
+    * Function A defines a variable.
+    * Function B is inside A and can use A's variable.
+
+
+=======
+Closure
+=======
+
+A closure happens when:
+    * An inner function is returned from an outer function.
+    * The inner function keeps access to the outer function's variables even after the outer function has finished running.
+    * This is possible because of lexical scope.
+
+Closures are important because:
+    * They allow functions to remember values without using global variables.
+    * They are used in event handlers, callbacks, and many other real cases.
+
+
+Real-world example of closure
+-----------------------------
+
+One common example is event handling:
+    * You have a function that returns another function.
+    * The returned function uses variables from the first function.
+    * Even after the first function is finished, the returned function still remembers those variables.
+
+Example idea:
+    * A click handler function takes a color as a parameter.
+    * It returns another function that changes the background color.
+    * This returned function can still use the "color" variable from the first function.
+

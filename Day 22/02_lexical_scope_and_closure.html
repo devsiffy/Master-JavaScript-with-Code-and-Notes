@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+
+    <script>
+      /*
+        Lexical Scope
+        When inner function access the property of outer function, is known
+        as lexically scoping.
+      */
+
+      function outerFunc() {
+        const username = "devsiffy";
+
+        function innerFunc() {
+          console.log(`username is: ${username}`); // lexical scope
+        }
+
+        innerFunc();
+      }
+
+      //   outerFunc();
+
+      /*
+        Closure
+        In JavaScript, a closure happens when we return an inner function from an outer
+        function Even after the outer function has finished running and its execution
+        context is gone from the call stack, the returned inner function still keeps
+        access to the outer function’s variables (its lexical scope). This allows the
+        inner function to use those variables later without any error.
+      */
+
+      function outer() {
+        const username = "anonymous";
+
+        function inner() {
+          console.log(`username is ${username}`);
+        }
+
+        return inner;
+      }
+
+      //   const func = outer();
+      //   func(); // happens due to 'closure'
+
+      /*
+        Real-world scenario (example) of Closure
+      */
+
+      function clickHandler(color) {
+        // Below line is not working fine, because event listener (that calls this function) expect a function in return
+        // document.body.style.backgroundColor = `${color}`; // Problem
+
+        // closure (returning inner function with lexical scope)
+        return function () {
+          document.body.style.backgroundColor = `${color}`;
+        };
+      }
+
+      document
+        .getElementById("orange")
+        .addEventListener("click", clickHandler("orange"));
+
+      document
+        .getElementById("green")
+        .addEventListener("click", clickHandler("green"));
+    </script>
+  </body>
+</html>

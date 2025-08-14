@@ -577,3 +577,34 @@
    - Using `Object.defineProperty()`
    - Making properties read-only, hidden in loops, or locked
    - Practical steps to configure property settings
+
+---
+
+<h3>📅 Day 22</h3>
+
+> 💡 _"Control your data, control your code."_
+
+1. **Getters & Setters**
+
+   - In Classes, Constructor Functions, and Objects
+   - Why Use Them & Key Rules
+   - Access as Properties, Not Functions
+     <br />
+
+2. **Private Fields in Classes**
+
+   - Old Underscore Convention vs Modern `#` Syntax
+   - True Privacy and Access Restrictions
+     <br />
+
+3. **Lexical Scoping**
+
+   - Inner Functions Remember Outer Variables
+   - Scope Determined at Creation, Not Call
+     <br />
+
+4. **Closures**
+
+   - Inner Functions Keeping Access After Outer Ends
+   - Uses in Event Handlers, Callbacks, and More
+   - Real Scenario of Closure Example
